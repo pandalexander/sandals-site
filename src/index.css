@@ -6,4 +6,21 @@
 
 :root {
   @apply bg-primaryMain;
+  @apply font-main;
+}
+
+h1,
+h2 {
+  @apply font-personality;
+  @apply text-6xl;
+}
+
+h3,
+h4,
+blockquote,
+q,
+aside,
+small {
+  @apply font-accent;
+  @apply text-xl;
 }
