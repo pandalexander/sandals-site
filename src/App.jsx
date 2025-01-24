@@ -11,13 +11,13 @@ function App() {
           md:flex-row md:justify-center md:items-center lg:gap-28 md:gap-16"
         >
           <header className=" flex-1 flex flex-col gap-8">
-            <h1 className="font-bold text-baseDark md:text-5xl lg:text-6xl leading-relaxed">
+            <h1 className="font-bold text-baseDark text-4xl md:text-5xl lg:text-6xl leading-relaxed">
               Empower Your Church to Grow Together in{" "}
               <span className="bg-gradient-to-br from-primaryMain to-primaryDark bg-clip-text text-transparent">
                 Discipleship
               </span>
             </h1>
-            <p className="text-baseDark leading-loose text-2xl md:text-xl">
+            <p className="text-baseDark leading-loose text-xl md:text-xl">
               Discover the next generation of ministry technology—where biblical
               discipleship meets the power of AI.
             </p>
