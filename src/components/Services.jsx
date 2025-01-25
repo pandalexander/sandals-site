@@ -11,7 +11,10 @@ export default function Services() {
           {/* Content container with responsive layout */}{" "}
           <div className="flex-col-reverse gap-12 md:flex-row flex items-center justify-center lg:gap-24 md:gap-12 px-6">
             <figure className="w-80 md:w-1/2 lg:p-8  ">
-              <img src={AppIllustration} alt="" />
+              <img
+                src={AppIllustration}
+                alt="Illustration of an app interface"
+              />
             </figure>
             <article className="md:w-1/2 w-auto">
               <header className="flex items-center gap-6">
