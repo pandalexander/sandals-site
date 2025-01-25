@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function ServiceBlock({
   image,
   imageAlt,
@@ -47,3 +49,13 @@ export default function ServiceBlock({
     </div>
   );
 }
+
+ServiceBlock.propTypes = {
+  image: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subheading: PropTypes.string.isRequired,
+  Icon: PropTypes.object.isRequired,
+  paragraphContent: PropTypes.string.isRequired,
+  imageOnLeft: PropTypes.bool.isRequired,
+};
