@@ -1,11 +1,26 @@
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import ScrollSection from "./components/ScrollSection";
 
 function App() {
+  const notDiscipleshipList = [
+    "Sunday Service",
+    "Bible Studies",
+    "Classes",
+    "Programs",
+    "Small Group",
+    "Retreats",
+    "Men's Groups",
+    "Women's Groups",
+    "Youth Ministries",
+    "Recovery Ministries",
+  ];
+
   return (
     <>
       <div className="flex flex-col items-stretch">
         <Hero />
+        <ScrollSection notDiscipleshipList={notDiscipleshipList} />
         <Services />
       </div>
 
