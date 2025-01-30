@@ -21,7 +21,7 @@ export default function ScrollSection(props) {
                 (item, index) => {
                   return (
                     <li
-                      className="text-nowrap font-bold bg-primaryMain rounded-xl px-4 py-2 hover:cursor-default duration-300 transition-all hover:scale-95"
+                      className="text-nowrap font-bold bg-primaryMain rounded-full px-4 py-2 hover:cursor-default duration-300 transition-all hover:scale-95"
                       key={index}
                     >
                       {item}
@@ -33,7 +33,7 @@ export default function ScrollSection(props) {
           </div>
 
           <div className="font-main mx-3 text-left text-accentLight text-lg my-10 space-y-6 md:flex md:gap-6 md:justify-center md:items-stretch md:space-y-0">
-            <div className="bg-primaryDark hover:rotate-2 hover:bg-opacity-90 shadow-xl p-6 space-y-2 rounded-2xl hover:-translate-y-1 transition-all duration-300 ">
+            <div className="bg-primaryDark hover:bg-opacity-90 shadow-xl p-6 space-y-2 rounded-2xl hover:-translate-y-1 transition-all duration-300 ">
               <CircleAlert className="text-amber-600 w-6 h-6" />{" "}
               <p className="">
                 While these efforts listed above can be valuable to believers
@@ -41,7 +41,7 @@ export default function ScrollSection(props) {
                 replacement for authentic biblical discipleship.
               </p>
             </div>
-            <div className="bg-accentMuted hover:-rotate-2 text-primaryDark hover:bg-opacity-90  p-6 space-y-2 rounded-2xl hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-accentMuted text-primaryDark hover:bg-opacity-90  p-6 space-y-2 rounded-2xl hover:-translate-y-1 transition-all duration-300">
               <TreeDeciduous className="text-primaryMain w-6 h-6" />{" "}
               <p className="">
                 Biblical Discipleship is bringing people to Christ and leading

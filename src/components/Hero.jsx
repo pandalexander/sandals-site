@@ -9,7 +9,7 @@ export default function Hero() {
             md:flex-row md:justify-center md:items-center lg:gap-28 md:gap-16"
     >
       <header className=" flex-1 flex flex-col md:gap-8 gap-6">
-        <h1 className="font-bold text-baseDark text-4xl md:text-5xl lg:text-6xl leading-relaxed text-balance">
+        <h1 className="font-bold text-baseDark text-4xl md:text-5xl lg:text-6xl !leading-snug text-balance">
           Empower Your Church to Grow Together in{" "}
           <span className="bg-gradient-to-br from-primaryMain to-primaryDark bg-clip-text text-transparent">
             Discipleship
