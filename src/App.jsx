@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import ScrollSection from "./components/ScrollSection";
+import Navbar from "./components/Navbar";
 
 function App() {
   const notDiscipleshipList = [
@@ -18,6 +19,8 @@ function App() {
 
   return (
     <>
+      <Navbar />
+
       <div className="flex flex-col items-stretch">
         <Hero />
         <ScrollSection notDiscipleshipList={notDiscipleshipList} />
