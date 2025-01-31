@@ -15,7 +15,7 @@ export default function ScrollSection(props) {
           <h2 className="text-5xl md:text-6xl my-10 text-primaryDark">
             Discipleship is not...
           </h2>
-          <div className="overflow-hidden mt-6 flex xl:rounded-xl xl:mx-3">
+          <div className="overflow-hidden mt-6 flex xl:rounded-full xl:mx-3">
             <ul className="flex gap-10 text-accentLight tracking-wider font-accent  animate-infinite-scroll">
               {[...props.notDiscipleshipList, ...props.notDiscipleshipList].map(
                 (item, index) => {

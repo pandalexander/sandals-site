@@ -18,7 +18,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 py-3 bg-primaryMain shadow-lg font-semibold lg:rounded-b-lg lg:mx-3">
+      <nav
+        className={`sticky top-0 z-50 py-3 bg-primaryMain  font-semibold lg:rounded-b-2xl mx-3 ${
+          menuIsOpen ? "" : "shadow-lg rounded-b-2xl "
+        }`}
+      >
         <div className="container px-4 mx-auto relative text-sm">
           <div className="flex justify-between items-center ">
             <div
@@ -40,33 +44,15 @@ const Navbar = () => {
                 <Menu onClick={handleMenuClick} />
               )}
             </div>
-            <ul className="hidden font-main lg:flex ml-14 space-x-12 text-white">
-              <li>
-                <div
-                  to="services"
-                  offset={-70}
-                  className="hover:underline hover:cursor-pointer"
-                >
-                  Services
-                </div>
+            <ul className="hidden font-main lg:flex ml-14 space-x-12 text-white hover:cursor-default">
+              <li className="hover:text-accentMuted hover:cursor-pointer">
+                Services
               </li>
-              <li>
-                <div
-                  to="about"
-                  offset={-70}
-                  className="hover:underline hover:cursor-pointer"
-                >
-                  About
-                </div>
+              <li className="hover:text-accentMuted hover:cursor-pointer">
+                About
               </li>
-              <li>
-                <div
-                  to="contact"
-                  offset={-70}
-                  className="hover:underline hover:cursor-pointer"
-                >
-                  Contact
-                </div>
+              <li className="hover:text-accentMuted hover:cursor-pointer">
+                Contact
               </li>
             </ul>
             <div className="hidden lg:flex justify-center space-x-12 items-center">
@@ -84,40 +70,40 @@ const Navbar = () => {
         </div>
       </nav>
       {menuIsOpen && (
-        <div className="bg-primaryDark lg:hidden fixed  w-full right-0 z-20 md:grid md:grid-cols-2 flex flex-col gap-5 justify-center p-4 font-semibold">
-          <div
-            onClick={handleMenuClick}
-            to="services"
-            offset={-70}
-            className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
-          >
-            Services
-          </div>
-          <div
-            onClick={handleMenuClick}
-            to="about"
-            className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
-          >
-            About
-          </div>
-
-          <div
-            onClick={handleMenuClick}
-            to="about"
-            className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
-          >
-            Contact
-          </div>
-
-          <a
-            href=""
-            className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
-          >
-            <div className="flex space-x-2 items-center justify-center">
-              <SendHorizontal size={18} className="text-primaryMain" />
-              <p>Get in touch</p>
+        <div className="fixed w-full right-0 z-20">
+          <div className="bg-primaryMain rounded-b-2xl lg:hidden mx-3 shadow-lg md:grid md:grid-cols-2 flex flex-col gap-5 justify-center p-4 font-semibold">
+            <div
+              onClick={handleMenuClick}
+              to="services"
+              offset={-70}
+              className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+            >
+              Services
             </div>
-          </a>
+            <div
+              onClick={handleMenuClick}
+              to="about"
+              className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+            >
+              About
+            </div>
+            <div
+              onClick={handleMenuClick}
+              to="about"
+              className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+            >
+              Contact
+            </div>
+            <a
+              href=""
+              className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+            >
+              <div className="flex space-x-2 items-center justify-center">
+                <SendHorizontal size={18} className="text-primaryMain" />
+                <p>Get in touch</p>
+              </div>
+            </a>
+          </div>
         </div>
       )}
     </>
