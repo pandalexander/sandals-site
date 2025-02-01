@@ -1,6 +1,17 @@
 import MockupImage from "../assets/app-mockup.png";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [heroIsLoaded, setHeroLoaded] = useState(false);
+
+  const heroUrl = MockupImage;
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = heroUrl;
+    img.onload = () => setHeroLoaded(true);
+  }, [heroUrl]);
+
   return (
     <section
       className="self-center max-w-7xl bg-accentMuted rounded-2xl my-6 mx-3 py-14 px-8 md:px-12
@@ -28,10 +39,13 @@ export default function Hero() {
       </header>
       <div className="flex-1 md:max-w-md max-w-96 ">
         <img
-          src={MockupImage}
+          src={heroUrl}
           alt="Mockup of the app showcasing features"
-          loading="lazy"
-          className=""
+          className={`${
+            heroIsLoaded
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-9"
+          } transition-all duration-700 ease-in-out`}
         />
       </div>
     </section>
