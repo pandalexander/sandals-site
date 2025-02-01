@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import ScrollSection from "./components/ScrollSection";
 import Navbar from "./components/Navbar";
+import CorePrinciples from "./components/CorePrinciples";
 
 function App() {
   const notDiscipleshipList = [
@@ -25,6 +26,7 @@ function App() {
         <Hero />
         <ScrollSection notDiscipleshipList={notDiscipleshipList} />
         <Services />
+        <CorePrinciples />
       </div>
 
       <h1 className="text-3xl font-bold underline bg-primary">Hello world!</h1>
