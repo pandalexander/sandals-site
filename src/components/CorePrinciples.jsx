@@ -14,10 +14,10 @@ function Principle({ Icon, title, paragraph }) {
   return (
     <div
       className="min-w-fit
-    p-6 flex flex-col gap-3 bg-accentMuted to-primaryDark text-baseDark rounded-2xl transition-all duration-300 ease-in-out hover:bg-baseLight hover:cursor-default border-accentMuted border-2 hover:border-primaryMain hover:shadow-lg"
+    p-6 flex flex-col gap-3 bg-baseLight to-primaryDark text-baseDark rounded-2xl transition-all duration-300 ease-in-out hover:bg-accentLight hover:cursor-default border-accentMuted border-2 hover:border-primaryMain hover:shadow-lg"
     >
       <div className="flex gap-3">
-        <Icon className={`min-w-6 min-h-6 `} />
+        <Icon className={`min-w-6 min-h-6 text-highlight`} />
         <h3>{title}</h3>
       </div>
       <p>{paragraph}</p>
