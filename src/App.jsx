@@ -3,6 +3,7 @@ import Services from "./components/Services";
 import ScrollSection from "./components/ScrollSection";
 import Navbar from "./components/Navbar";
 import CorePrinciples from "./components/CorePrinciples";
+import Mission from "./components/Mission";
 
 function App() {
   const notDiscipleshipList = [
@@ -27,6 +28,7 @@ function App() {
         <ScrollSection notDiscipleshipList={notDiscipleshipList} />
         <Services />
         <CorePrinciples />
+        <Mission />
       </div>
 
       <h1 className="text-3xl font-bold underline bg-primary">Hello world!</h1>
