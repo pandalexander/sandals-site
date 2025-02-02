@@ -52,18 +52,18 @@ const Mission = () => {
                       selectedMission == index
                         ? "bg-baseLight text-primaryDark"
                         : "bg-baseLight/70 text-accentTertiary"
-                    } flex justify-between text-nowrap font-bold  rounded-full px-4 py-2  hover:translate-x-1 duration-300 transition-all ease-in-out text-center`}
+                    }  flex justify-between items-center font-bold rounded-full px-4 py-2  hover:translate-x-1 duration-300 transition-all ease-in-out text-center`}
                   >
-                    <div className="flex gap-6">
-                      <item.icon />
+                    <div className="flex gap-6 items-center text-left">
+                      <item.icon className="min-w-6 min-h-6" />
                       <span className="text-primaryDark">{item.title}</span>
                     </div>
                     <span className="hidden lg:block">
                       <ArrowRight
                         className={`${
                           selectedMission == index
-                            ? " text-primaryDark"
-                            : "hidden"
+                            ? " text-primaryDark opacity-100"
+                            : "opacity-0"
                         } `}
                       />
                     </span>
@@ -71,8 +71,8 @@ const Mission = () => {
                       <ChevronDown
                         className={`${
                           selectedMission == index
-                            ? " text-primaryDark"
-                            : "hidden"
+                            ? " text-primaryDark opacity-100"
+                            : "opacity-0"
                         } `}
                       />
                     </span>
