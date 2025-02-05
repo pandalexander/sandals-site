@@ -34,7 +34,7 @@ Principle.propTypes = {
 const CorePrinciples = () => {
   return (
     <>
-      <div className="self-center max-w-7xl mx-3">
+      <div className="self-center max-w-7xl mx-3 mt-12">
         <h1 className="text-center my-6">Our Core Principles</h1>
         <div className="flex">
           <div className="self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch  gap-6 flex-1  rounded-2xl my-6">
