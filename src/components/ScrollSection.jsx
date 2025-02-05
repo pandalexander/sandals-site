@@ -68,8 +68,8 @@ export default function ScrollSection() {
             <div className="bg-primaryDark hover:bg-opacity-90 shadow-xl p-6 space-y-2 rounded-2xl hover:-translate-y-1 transition-all duration-300 ">
               <CircleAlert className="text-amber-600 w-6 h-6" />{" "}
               <p className="">
-                While these efforts listed above can be valuable to believers
-                and the church body as a whole, they should not be considered a
+                While the efforts listed above can be valuable to believers and
+                the church body as a whole, they should not be considered a
                 replacement for authentic biblical discipleship.
               </p>
             </div>
