@@ -27,8 +27,9 @@ function App() {
       <div className="flex flex-col items-stretch">
         <Hero />
         <ScrollSection notDiscipleshipList={notDiscipleshipList} />
-        <Services />
         <CorePrinciples />
+
+        <Services />
         <Mission />
         <Footer />
       </div>

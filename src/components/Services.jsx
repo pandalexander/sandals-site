@@ -9,9 +9,6 @@ export default function Services() {
   return (
     <>
       <div className="mt-12">
-        <h1 className="self-center max-w-7xl mx-3 text-center">
-          Our Solutions
-        </h1>
         <ServiceBlock
           image={AppIllustration}
           imageAlt={"Illustration of an app interface"}
