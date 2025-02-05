@@ -35,7 +35,7 @@ export default function ServiceBlock({
                 </h2>
               </header>
               <hr className="my-3 w-full h-2 border-0 rounded-xl  bg-highlight" />
-              <h3 className="my-6">{subheading}</h3>
+              <h3 className="my-6 text-primaryDark">{subheading}</h3>
               <p
                 className=" lg:leading-loose
                     leading-relaxed"
