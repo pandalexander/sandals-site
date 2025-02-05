@@ -1,6 +1,6 @@
 import Logo from "../assets/sandals-logo.png";
 import { Menu, X } from "lucide-react";
-import { SendHorizontal } from "lucide-react";
+import { Send } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
                 <Menu onClick={handleMenuClick} />
               )}
             </div>
-            <ul className="hidden font-main lg:flex ml-14 space-x-12 text-white hover:cursor-default">
+            <ul className="hidden text-base font-accent lg:flex ml-14 space-x-12 text-baseLight hover:cursor-default">
               <li className="hover:text-accentMuted hover:cursor-pointer">
                 Services
               </li>
@@ -58,10 +58,10 @@ const Navbar = () => {
             <div className="hidden lg:flex justify-center space-x-12 items-center">
               <a
                 href=""
-                className="py-2 px-4 border-0 rounded-full bg-gradient-to-br from-white to-accentLight text-primaryMain font-bold hover:translate-x-1 transition-all duration-300"
+                className="py-2 px-4 border-0 rounded-full bg-gradient-to-br from-white to-accentLight text-primaryDark font-bold hover:translate-x-1 transition-all duration-300"
               >
                 <div className="flex space-x-2 items-center justify-center">
-                  <SendHorizontal size={18} className="text-primaryMain" />
+                  <Send size={18} className="text-primaryMain" />
                   <p>Get in touch</p>
                 </div>
               </a>
@@ -71,35 +71,35 @@ const Navbar = () => {
       </nav>
       {menuIsOpen && (
         <div className="fixed w-full right-0 z-20">
-          <div className="bg-primaryMain rounded-b-2xl lg:hidden mx-3 shadow-lg md:grid md:grid-cols-2 flex flex-col gap-5 justify-center p-4 font-semibold">
+          <div className="bg-primaryMain rounded-b-2xl lg:hidden mx-3 shadow-lg md:grid md:grid-cols-2 flex flex-col gap-3 justify-center p-4 text-base font-accent">
             <div
               onClick={handleMenuClick}
               to="services"
               offset={-70}
-              className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+              className="py-2 px-3 text-center rounded-full bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
             >
               Services
             </div>
             <div
               onClick={handleMenuClick}
               to="about"
-              className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+              className="py-2 px-3 text-center rounded-full bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
             >
               About
             </div>
             <div
               onClick={handleMenuClick}
               to="about"
-              className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+              className="py-2 px-3 text-center rounded-full bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
             >
               Contact
             </div>
             <a
               href=""
-              className="py-2 px-3 text-center rounded-md bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+              className="py-2 px-3 text-center rounded-full bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
             >
               <div className="flex space-x-2 items-center justify-center">
-                <SendHorizontal size={18} className="text-primaryMain" />
+                <Send size={18} className="text-primaryMain" />
                 <p>Get in touch</p>
               </div>
             </a>
