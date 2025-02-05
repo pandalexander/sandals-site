@@ -1,6 +1,6 @@
 import MockupImage from "../assets/app-mockup.png";
 import { useEffect, useState } from "react";
-
+import { Rocket } from "lucide-react";
 export default function Hero() {
   const [heroIsLoaded, setHeroLoaded] = useState(false);
 
@@ -31,10 +31,13 @@ export default function Hero() {
           discipleship meets the power of AI.
         </p>
         <button
-          className="md:mx-0 mx-auto px-6 bg-baseLight rounded-full p-2 text-baseDark font-bold text-lg max-w-64 hover:bg-primaryMain hover:text-baseLight hover:-translate-y-1 transition-all duration-200"
+          className="flex items-center justify-between md:mx-0 mx-auto px-6 bg-baseLight rounded-full p-2 text-baseDark font-bold text-lg max-w-64 hover:bg-primaryMain hover:text-baseLight hover:-translate-y-1 transition-all duration-200"
           aria-label="Download the app today"
         >
-          Get the app today 🚀
+          Get the app today{" "}
+          <span className="ml-4">
+            <Rocket />
+          </span>
         </button>
       </header>
       <div className="flex-1 md:max-w-md max-w-96 ">
