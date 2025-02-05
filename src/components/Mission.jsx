@@ -81,7 +81,7 @@ const Mission = () => {
               );
             })}
           </header>
-          <div className="md:h-60 h-80 flex items-center lg:flex-1 text-baseLight leading-loose font-semibold text-lg">
+          <div className="md:h-60 h-96 flex items-center lg:flex-1 text-baseLight leading-loose font-semibold text-lg">
             <p>{missionData[selectedMission].copy}</p>
           </div>
         </section>{" "}
