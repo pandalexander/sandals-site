@@ -5,7 +5,7 @@ import {
   Users,
   Nfc,
   ArrowRight,
-  ChevronDown,
+  CornerRightUp,
 } from "lucide-react";
 
 const Mission = () => {
@@ -37,7 +37,7 @@ const Mission = () => {
       <div className="w-full flex justify-center">
         <section
           className="w-full max-w-7xl bg-gradient-to-br from-baseDark/90 to-baseDark rounded-2xl my-6 mx-3 py-14 px-8 md:px-12
-                flex flex-col items-center gap-8
+                flex flex-col-reverse items-center gap-8
           
                 lg:flex-row lg:justify-center lg:items-start xl:gap-28 lg:gap-16
                 "
@@ -52,7 +52,7 @@ const Mission = () => {
                       selectedMission == index
                         ? "bg-baseLight text-primaryDark"
                         : "bg-baseLight/70 text-accentTertiary"
-                    }  flex justify-between items-center font-bold rounded-full px-4 py-2  hover:translate-x-1 duration-300 transition-all ease-in-out text-center`}
+                    }  flex justify-between items-center font-bold rounded-full px-4 py-2 hover:-translate-y-1 lg:hover:translate-x-1 lg:hover:translate-y-0 duration-300 transition-all ease-in-out text-center`}
                   >
                     <div className="flex gap-6 items-center text-left">
                       <item.icon className="min-w-6 min-h-6" />
@@ -68,7 +68,7 @@ const Mission = () => {
                       />
                     </span>
                     <span className="block lg:hidden">
-                      <ChevronDown
+                      <CornerRightUp
                         className={`${
                           selectedMission == index
                             ? " text-primaryDark opacity-100"
@@ -81,7 +81,7 @@ const Mission = () => {
               );
             })}
           </header>
-          <div className="flex-1 text-baseLight leading-loose font-semibold text-lg">
+          <div className="md:h-60 h-80 flex items-center lg:flex-1 text-baseLight leading-loose font-semibold text-lg">
             <p>{missionData[selectedMission].copy}</p>
           </div>
         </section>{" "}
