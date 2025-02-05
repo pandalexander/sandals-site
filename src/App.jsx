@@ -4,6 +4,7 @@ import ScrollSection from "./components/ScrollSection";
 import Navbar from "./components/Navbar";
 import CorePrinciples from "./components/CorePrinciples";
 import Mission from "./components/Mission";
+import Footer from "./components/Footer";
 
 function App() {
   const notDiscipleshipList = [
@@ -29,9 +30,10 @@ function App() {
         <Services />
         <CorePrinciples />
         <Mission />
+        <Footer />
       </div>
 
-      <h1 className="text-3xl font-bold underline bg-primary">Hello world!</h1>
+      {/* <h1 className="text-3xl font-bold underline bg-primary">Hello world!</h1>
       <div className="bg-primaryMain text-baseLight">primaryMain</div>
       <div className="bg-primaryDark text-baseLight">primaryDark</div>
       <div className="bg-baseDark text-baseLight">baseDark</div>
@@ -42,7 +44,7 @@ function App() {
       <div className="bg-highlight text-baseLight">highlight</div>
       <div className="text-5xl font-personality">personality font</div>
       <div className="text-3xl font-accent">accent</div>
-      <div className="text-xl font-main">main font</div>
+      <div className="text-xl font-main">main font</div> */}
     </>
   );
 }
