@@ -45,13 +45,14 @@ const Navbar = () => {
               )}
             </div>
             <ul className="hidden text-base font-accent lg:flex ml-14 space-x-12 text-baseLight hover:cursor-default">
-              <li className="hover:text-accentMuted hover:cursor-pointer">
+              <li></li>
+              <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
                 Services
               </li>
-              <li className="hover:text-accentMuted hover:cursor-pointer">
+              <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
                 About
               </li>
-              <li className="hover:text-accentMuted hover:cursor-pointer">
+              <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
                 Contact
               </li>
             </ul>
@@ -76,30 +77,27 @@ const Navbar = () => {
               onClick={handleMenuClick}
               to="services"
               offset={-70}
-              className="py-2 px-3 text-center rounded-full bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+              className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
             >
               Services
             </div>
             <div
               onClick={handleMenuClick}
               to="about"
-              className="py-2 px-3 text-center rounded-full bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+              className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
             >
               About
             </div>
             <div
               onClick={handleMenuClick}
               to="about"
-              className="py-2 px-3 text-center rounded-full bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
+              className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
             >
               Contact
             </div>
-            <a
-              href=""
-              className="py-2 px-3 text-center rounded-full bg-gradient-to-br from-zinc-100 to-zinc-200 text-brandDark hover:from-white hover:to-white hover:text-primaryMain hover:cursor-pointer"
-            >
+            <a className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out">
               <div className="flex space-x-2 items-center justify-center">
-                <Send size={18} className="text-primaryMain" />
+                <Send size={18} className="text-baseLight" />
                 <p>Get in touch</p>
               </div>
             </a>
