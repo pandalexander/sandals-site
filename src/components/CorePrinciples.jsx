@@ -35,7 +35,7 @@ const CorePrinciples = () => {
   return (
     <>
       <div className="self-center max-w-7xl mx-3 mt-12">
-        <h1 className="text-center my-6 text-primaryDark">
+        <h1 className="text-center my-6 text-primaryDark text-balance">
           The Eight Facets of Spiritual Maturity
         </h1>
         <div className="flex">
