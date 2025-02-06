@@ -2,8 +2,8 @@ import { useState } from "react";
 import {
   Crosshair,
   Telescope,
-  Users,
-  Nfc,
+  Map,
+  Footprints,
   ArrowRight,
   CornerRightUp,
 } from "lucide-react";
@@ -13,23 +13,23 @@ const Mission = () => {
   const missionData = [
     {
       title: "Our Mission",
-      copy: "At Sandals Discipleship Ministries, our mission is to partner with churches, ministries, and faith-based organizations to embed discipleship into their foundational practices. We are committed to helping congregations embody a holistic approach to spiritual growth that mirrors the early church’s communal life.",
+      copy: "We partner with churches, ministries, and faith organizations to integrate discipleship into every aspect of their mission. At Sandals, we are driven by a deep desire to strengthen Christ’s bride—the Church in all its forms—by fostering a healthy, intentional, and authentic approach to biblical discipleship. Our goal is to provide modern tools and methods that equip both disciples and the ministries that train and send them.",
       icon: Crosshair,
     },
     {
-      title: "Vision for Partnerships",
-      copy: 'By collaborating with various faith communities, we aim to foster environments where individuals can grow in Christ together, encouraging maturity through shared worship, teaching, and service. Our goal is to make discipleship an integral part of every believer\'s journey, enabling them to "grow in every way more and more like Christ" (Ephesians 4:15 NLT).',
+      title: "Vision for Empowerment",
+      copy: "We empower the global Church to fulfill the Great Commission through authentic biblical discipleship. Rather than replicating the God-honoring work of those who came before us, we recognize their contributions and are blessed to build upon their foundation. While many Christians understand the importance of discipleship, they often hesitate because they do not know where to begin. Our mission is to equip them with the tools and guidance they need to disciple with confidence.",
       icon: Telescope,
     },
     {
-      title: "Emphasizing Congregational Health",
-      copy: "We understand the vital role that mature believers play in serving as stewards of God’s grace for the common good. By equipping leaders with the tools to nurture spiritual health within their communities, we enhance the ability of individuals and groups to thrive both spiritually and relationally.",
-      icon: Users,
+      title: "Our Guiding Principle",
+      copy: "We are committed to ensuring that everything we do fosters authentic conversion through meaningful interpersonal relationships. We are driven to facilitate intentional spiritual growth while equipping shepherds to actively engage and guide their sheep.",
+      icon: Map,
     },
     {
-      title: "Reflecting Jesus’ Call to Discipleship",
-      copy: 'We are inspired by Jesus\' call to "go and make disciples" (Matthew 28:19-20), encouraging a focus on teaching new believers, baptizing them, and supporting them in following Christ’s teachings. Our approach emphasizes the importance of community, active learning, and service as foundational elements of effective discipleship.',
-      icon: Nfc,
+      title: "Why 'Sandals'?",
+      copy: "The name Sandals reflects our walk in discipleship, following Christ’s command to go and make disciples with faith in God’s provision. Throughout Scripture, sandals symbolize being sent, God’s sustaining care, the sealing of redemption, and Christ’s unmatched authority, calling us to walk humbly in His footsteps.",
+      icon: Footprints,
     },
   ];
   return (
