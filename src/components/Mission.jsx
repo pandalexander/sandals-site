@@ -13,12 +13,12 @@ const Mission = () => {
   const missionData = [
     {
       title: "Our Mission",
-      copy: "We partner with churches, ministries, and faith organizations to integrate discipleship into every aspect of their mission. At Sandals, we are driven by a deep desire to strengthen Christ’s bride—the Church in all its forms—by fostering a healthy, intentional, and authentic approach to biblical discipleship. Our goal is to provide modern tools and methods that equip both disciples and the ministries that train and send them.",
+      copy: "We partner with churches, ministries, and faith organizations to integrate discipleship into every aspect of their mission. Our goal is to provide modern tools and methods that equip both disciples and the ministries that train and send them.",
       icon: Crosshair,
     },
     {
       title: "Vision for Empowerment",
-      copy: "We empower the global Church to fulfill the Great Commission through authentic biblical discipleship. Rather than replicating the God-honoring work of those who came before us, we recognize their contributions and are blessed to build upon their foundation. While many Christians understand the importance of discipleship, they often hesitate because they do not know where to begin. Our mission is to equip them with the tools and guidance they need to disciple with confidence.",
+      copy: "We empower the global Church to fulfill the Great Commission through authentic biblical discipleship. Rather than replicating the God-honoring work of those who came before us, we recognize their contributions and are blessed to build upon their foundation. Our mission is to equip them with the tools and guidance they need to disciple with confidence.",
       icon: Telescope,
     },
     {
@@ -32,6 +32,7 @@ const Mission = () => {
       icon: Footprints,
     },
   ];
+
   return (
     <>
       <div className="w-full flex justify-center my-12">
