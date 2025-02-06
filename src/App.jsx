@@ -30,11 +30,11 @@ function App() {
         <Hero />
         <ScrollSection notDiscipleshipList={notDiscipleshipList} />
         <WhyDisciple />
+        <Mission />
 
         <CorePrinciples />
 
         <Services />
-        <Mission />
         <Footer />
       </div>
 
