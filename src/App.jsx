@@ -9,6 +9,7 @@ import Mission from "./components/Mission";
 import CTA from "./components/CTA";
 
 import Footer from "./components/Footer";
+import ServicesWithPhotos from "./components/ServiceSectionPhotos";
 
 function App() {
   const notDiscipleshipList = [
@@ -38,6 +39,7 @@ function App() {
 
         <Services />
         <CTA />
+        <ServicesWithPhotos />
 
         <Footer />
       </div>

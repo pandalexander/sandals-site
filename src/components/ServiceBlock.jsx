@@ -18,11 +18,11 @@ export default function ServiceBlock({
           <div
             className={`${
               imageOnLeft ? "flex-col-reverse" : "flex-col"
-            } gap-12 md:flex-row flex items-center justify-center lg:gap-24 md:gap-12 px-6`}
+            } gap-12 md:flex-row flex items-center justify-center lg:gap-24 md:gap-12 px-6 `}
           >
             {imageOnLeft && (
               <figure className="w-80 md:w-1/2 lg:p-8  ">
-                <img src={image} alt={imageAlt} />
+                <img src={image} alt={imageAlt} className="rounded-2xl" />
               </figure>
             )}
 
@@ -45,7 +45,7 @@ export default function ServiceBlock({
             </article>
             {!imageOnLeft && (
               <figure className="w-80 md:w-1/2 lg:p-8  ">
-                <img src={image} alt={imageAlt} />
+                <img src={image} alt={imageAlt} className="rounded-2xl" />
               </figure>
             )}
           </div>
