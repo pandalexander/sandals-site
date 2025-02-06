@@ -47,10 +47,10 @@ const Navbar = () => {
             <ul className="hidden text-base font-accent lg:flex ml-14 space-x-12 text-baseLight hover:cursor-default">
               <li></li>
               <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
-                Services
+                About
               </li>
               <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
-                About
+                Services
               </li>
               <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
                 Contact
@@ -75,8 +75,15 @@ const Navbar = () => {
           <div className="bg-primaryMain rounded-b-2xl lg:hidden mx-3 shadow-lg md:grid md:grid-cols-2 flex flex-col gap-3 justify-center p-4 text-base font-accent">
             <div
               onClick={handleMenuClick}
-              to="services"
+              to="about"
               offset={-70}
+              className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
+            >
+              About
+            </div>
+            <div
+              onClick={handleMenuClick}
+              to="services"
               className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
             >
               Services
@@ -86,18 +93,11 @@ const Navbar = () => {
               to="about"
               className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
             >
-              About
-            </div>
-            <div
-              onClick={handleMenuClick}
-              to="about"
-              className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
-            >
               Contact
             </div>
-            <a className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out">
+            <a className="border-2 border-baseLight hover:bg-white text-primaryMain text-lg py-2 px-3 text-center rounded-full  bg-baseLight hover:cursor-pointer transition-all duration-300 ease-in-out">
               <div className="flex space-x-2 items-center justify-center">
-                <Send size={18} className="text-baseLight" />
+                <Send size={18} className="text-primaryMain" />
                 <p>Get in touch</p>
               </div>
             </a>
