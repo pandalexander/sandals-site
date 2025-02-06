@@ -9,6 +9,10 @@ export default function Services() {
   return (
     <>
       <div className="mt-12">
+        <h1 className="text-center text-primaryDark mx-3">
+          Our Tools for Discipleship
+        </h1>
+
         <ServiceBlock
           image={AppIllustration}
           imageAlt={"Illustration of an app interface"}
