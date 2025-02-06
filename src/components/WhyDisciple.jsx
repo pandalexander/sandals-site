@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
+import { TextQuote } from "lucide-react";
 
 function Principle({ number, paragraph }) {
   return (
-    <div className="flex min-w-fit justify-between items-center gap-8 p-8 border-primaryMain bg-white border-[1px] text-primaryMain hover:text-amber-500 transition-all duration-300 ease-in-out hover:cursor-default">
+    <div className="flex min-w-fit justify-between items-center gap-8 p-8 border-primaryMain bg-white border-[1px] text-primaryMain hover:text-amber-500 transition-all duration-300 ease-in-out hover:cursor-text ">
       <h1 className="font-accent text-5xl ">{number}</h1>
 
       <p className="text-primaryDark text-right">{paragraph}</p>
@@ -21,8 +22,8 @@ const WhyDisciple = () => {
       <div className="self-center max-w-7xl mx-3 mt-12">
         <h1 className="text-center my-6 text-primaryDark">Why Disciple?</h1>
 
-        <div className="flex">
-          <div className="self-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-6 md:grid-rows-3 xl:grid-rows-2 items-stretch flex-1  my-6 border-[0.5px] border-primaryMain text-balance">
+        <div className="flex ">
+          <div className="self-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-6 md:grid-rows-3 xl:grid-rows-2 items-stretch flex-1  mt-6 border-[0.5px] border-primaryMain text-balance">
             <Principle
               number={"1%"}
               paragraph={
@@ -61,11 +62,13 @@ const WhyDisciple = () => {
             />{" "}
           </div>
         </div>
-        <div className="flex flex-col text-right">
-          <cite>
+        <div className="flex flex-col mt-2 gap-2 md:items-end items-stretch text-right ">
+          <cite className="bg-primaryMain/20 p-3 border-r-4 border-primaryMain text-primaryDark flex items-center justify-between gap-4">
+            <TextQuote className="text-accentTertiary w-6 h-6 min-w-6 min-h-6 md:min-h-5 md:min-w-5 md:h-5 md:w-5" />
             Barna: New Research on the State of Discipleship, December 2015
           </cite>
-          <cite>
+          <cite className="bg-highlight/20 p-3 border-r-4 border-highlight text-primaryDark flex items-center justify-between gap-4">
+            <TextQuote className="text-accentTertiary w-6 h-6 min-w-6 min-h-6 md:min-h-5 md:min-w-5 md:h-5 md:w-5" />
             Christian Worldview Crisis? Dr.George Barna Reveals Disturbing
             Reality Behind Shocking Faith Stats, October 2023
           </cite>
