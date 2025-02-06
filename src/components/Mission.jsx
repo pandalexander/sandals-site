@@ -13,7 +13,8 @@ const Mission = () => {
   const missionData = [
     {
       title: "Our Mission",
-      copy: "We partner with churches, ministries, and faith organizations to integrate discipleship into every aspect of their mission. Our goal is to provide modern tools and methods that equip both disciples and the ministries that train and send them.",
+      copy: "We partner with churches, ministries, and faith organizations to integrate discipleship into every aspect of their mission. We are driven by a deep desire to strengthen Christ’s bride—the Church in all its forms. Our goal is to provide modern tools and methods that equip both disciples and the ministries that train and send them.",
+
       icon: Crosshair,
     },
     {
