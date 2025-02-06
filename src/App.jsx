@@ -6,6 +6,8 @@ import CorePrinciples from "./components/CorePrinciples";
 
 import WhyDisciple from "./components/WhyDisciple";
 import Mission from "./components/Mission";
+import CTA from "./components/CTA";
+
 import Footer from "./components/Footer";
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
         <CorePrinciples />
 
         <Services />
+        <CTA />
+
         <Footer />
       </div>
 
