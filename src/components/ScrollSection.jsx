@@ -11,25 +11,25 @@ export default function ScrollSection() {
           "
       >
         {/* Wrapper for the services section with a max width */}
-        <div className="w-full max-w-7xl  text-center mx-3">
+        <div className="w-full max-w-7xl text-center lg:text-left mx-3">
           {/* Content container with responsive layout */}
-          <div className="flex lg:flex-row flex-col justify-center flex-wrap">
+          <div className="flex lg:flex-row flex-col sm:justify-center lg:justify-start flex-wrap">
             <h2 className="text-5xl md:text-6xl mt-10 text-primaryDark text-wrap md:text-nowrap lg:my-10">
               Discipleship is not&nbsp;
             </h2>
             <div className="font-personality text-5xl md:text-6xl my-10 text-primaryMain">
               <Typewriter
                 words={[
-                  "Sunday Service",
-                  "Bible Studies",
-                  "Classes",
-                  "Programs",
-                  "Small Group",
-                  "Retreats",
-                  "Men's Groups",
-                  "Women's Groups",
-                  "Youth Ministries",
-                  "Recovery Ministries",
+                  "sunday service",
+                  "bible studies",
+                  "classes",
+                  "programs",
+                  "small group",
+                  "retreats",
+                  "men's group",
+                  "women's group",
+                  "youth ministries",
+                  "recovery ministries",
                 ]}
                 loop={false}
                 cursor
@@ -64,7 +64,7 @@ export default function ScrollSection() {
             </ul>
           </div> */}
 
-          <div className="font-main mx-3 text-left text-accentLight text-lg my-10 space-y-6 md:flex md:gap-6 md:justify-center md:items-stretch md:space-y-0">
+          <div className="font-main text-left text-accentLight text-lg my-10 space-y-6 md:flex md:gap-6 md:justify-center md:items-stretch md:space-y-0">
             <div className="bg-primaryDark hover:bg-opacity-90 shadow-xl p-6 space-y-2 rounded-2xl hover:-translate-y-1 transition-all duration-300 ">
               <CircleAlert className="text-amber-600 w-6 h-6" />{" "}
               <p className="">

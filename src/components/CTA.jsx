@@ -12,7 +12,7 @@ const CTA = () => {
           <div className="flex items-center">
             <h1 className="font-bold text-primaryDark text-4xl md:text-5xl lg:text-6xl !leading-snug text-balance">
               Start Transforming Discipleship in Your Church&nbsp;
-              <span className="bg-gradient-to-br from-primaryMain to-highlight bg-clip-text text-transparent">
+              <span className="bg-gradient-to-br from-primaryMain to-primaryDark bg-clip-text text-transparent">
                 Today
               </span>
             </h1>

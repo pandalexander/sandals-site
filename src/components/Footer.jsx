@@ -6,22 +6,22 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <h3 className="text-md font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 ">
                 <li>
                   <a
                     href=""
-                    className="text-primaryDark hover:text-primaryMain"
+                    className="text-primaryDark hover:text-primaryMain transition-all duration-300 ease-in-out"
                   >
-                    Book a Demo
+                    Get the app
                   </a>
                 </li>
                 <li>
                   <a
                     href="mailto:contact@sandalsdisciple.com"
                     target="_blank"
-                    className="text-primaryDark hover:text-primaryMain"
+                    className="text-primaryDark hover:text-primaryMain transition-all duration-300 ease-in-out"
                   >
-                    Email us
+                    Get in contact
                   </a>
                 </li>
               </ul>
@@ -33,7 +33,7 @@ const Footer = () => {
                   <a
                     href=""
                     target="_blank"
-                    className="text-primaryDark hover:text-primaryMain"
+                    className="text-primaryDark hover:text-primaryMain transition-all duration-300 ease-in-out"
                   >
                     Privacy Policy
                   </a>
@@ -42,9 +42,9 @@ const Footer = () => {
                   <a
                     href=""
                     target="_blank"
-                    className="text-primaryDark hover:text-primaryMain"
+                    className="text-primaryDark hover:text-primaryMain transition-all duration-300 ease-in-out"
                   >
-                    Careers
+                    Read more
                   </a>
                 </li>
               </ul>
