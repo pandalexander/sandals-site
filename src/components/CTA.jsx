@@ -25,8 +25,9 @@ const CTA = () => {
               technology.
             </p>
           </div>
+
           <button
-            className="flex items-center justify-between md:mx-0 mx-auto px-6 bg-white rounded-full p-2 text-primaryDark font-bold text-lg max-w-64 hover:bg-white hover:text-highlight hover:-translate-y-1 transition-all duration-200"
+            className="flex items-center justify-between md:mx-0 mx-auto px-6 bg-baseLight rounded-full p-2 text-baseDark font-bold text-lg max-w-64 hover:bg-primaryMain hover:text-baseLight hover:-translate-y-1 transition-all duration-200"
             aria-label="Download the app today"
           >
             Get started today{" "}

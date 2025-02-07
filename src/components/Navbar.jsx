@@ -62,8 +62,8 @@ const Navbar = () => {
                 className="py-2 px-4 border-0 rounded-full bg-gradient-to-br from-white to-accentLight text-primaryDark font-bold hover:translate-x-1 transition-all duration-300"
               >
                 <div className="flex space-x-2 items-center justify-center">
-                  <Send size={18} className="text-primaryMain" />
                   <p>Get in touch</p>
+                  <Send size={18} className="text-primaryMain" />
                 </div>
               </a>
             </div>
@@ -97,8 +97,8 @@ const Navbar = () => {
             </div>
             <a className="border-2 border-baseLight hover:bg-white text-primaryMain text-lg py-2 px-3 text-center rounded-full  bg-baseLight hover:cursor-pointer transition-all duration-300 ease-in-out">
               <div className="flex space-x-2 items-center justify-center">
-                <Send size={18} className="text-primaryMain" />
                 <p>Get in touch</p>
+                <Send size={18} className="text-primaryMain" />
               </div>
             </a>
           </div>
