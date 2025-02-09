@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <section
-      className="self-center max-w-7xl bg-accentMuted rounded-2xl my-6 mx-3 py-14 px-8 md:px-12
+      className="self-center bg-accentMuted rounded-2xl my-6 py-14 px-8 md:px-12
             flex flex-col items-center gap-16
         
             md:flex-row md:justify-center md:items-center lg:gap-28 md:gap-16"

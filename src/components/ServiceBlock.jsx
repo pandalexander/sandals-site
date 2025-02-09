@@ -13,7 +13,7 @@ export default function ServiceBlock({
     <section id="services section" className="flex my-12">
       {/* Wrapper for the services section with a max width */}
       <div className=" flex-1 flex justify-center ">
-        <div className="w-full max-w-7xl text-left mx-3 ">
+        <div className="w-full text-left">
           {/* Content container with responsive layout */}{" "}
           <div
             className={`${

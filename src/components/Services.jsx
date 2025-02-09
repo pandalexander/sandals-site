@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <>
       <div className="mt-12">
-        <h1 className="text-center text-primaryDark mx-3">
+        <h1 className="text-center text-primaryDark">
           Our Tools for Discipleship
         </h1>
 

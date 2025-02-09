@@ -19,7 +19,7 @@ Principle.propTypes = {
 const WhyDisciple = () => {
   return (
     <>
-      <div className="self-center max-w-7xl mx-3 mt-12">
+      <div className="self-center mt-12">
         <h1 className="text-center my-6 text-primaryDark">Why Disciple?</h1>
 
         <div className="flex ">

@@ -5,7 +5,7 @@ const CTA = () => {
     <>
       <div className="w-full flex justify-center mt-12">
         <section
-          className="w-full max-w-7xl bg-accentMuted rounded-2xl my-6 mx-3 py-14 px-8 md:px-12
+          className="w-full bg-accentMuted rounded-2xl my-6 py-14 px-8 md:px-12
                 flex flex-col items-stretch gap-8
                 "
         >

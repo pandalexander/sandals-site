@@ -38,7 +38,7 @@ const Mission = () => {
     <>
       <div className="w-full flex justify-center my-12">
         <section
-          className="w-full max-w-7xl bg-gradient-to-br from-baseDark/90 to-baseDark rounded-2xl my-6 mx-3 py-14 px-8 md:px-12
+          className="w-full bg-gradient-to-br from-baseDark/90 to-baseDark rounded-2xl my-6 py-14 px-8 md:px-12
                 flex flex-col-reverse items-center gap-8
           
                 lg:flex-row lg:justify-center lg:items-start xl:gap-28 lg:gap-16

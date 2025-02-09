@@ -16,19 +16,18 @@ function App() {
     <>
       <Navbar />
 
-      <div className="flex flex-col items-stretch">
-        <Hero />
-        <ScrollSection />
-        <WhyDisciple />
-        <Mission />
-
-        <CorePrinciples />
-
-        <Services />
-        <CTA />
-        {/* <ServicesWithPhotos /> */}
-
-        <Footer />
+      <div className="flex justify-center">
+        <div className="flex flex-col items-stretch max-w-7xl mx-3">
+          <Hero />
+          <ScrollSection />
+          <WhyDisciple />
+          <Mission />
+          <CorePrinciples />
+          <Services />
+          <CTA />
+          {/* <ServicesWithPhotos /> */}
+          <Footer />
+        </div>
       </div>
     </>
   );

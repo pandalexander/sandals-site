@@ -11,7 +11,7 @@ export default function ScrollSection() {
           "
       >
         {/* Wrapper for the services section with a max width */}
-        <div className="w-full max-w-7xl text-center lg:text-left mx-3">
+        <div className="w-full text-center lg:text-left">
           {/* Content container with responsive layout */}
           <div className="flex lg:flex-row flex-col sm:justify-center lg:justify-start flex-wrap">
             <h2 className="text-5xl md:text-6xl mt-10 text-primaryDark text-wrap md:text-nowrap lg:my-10">
