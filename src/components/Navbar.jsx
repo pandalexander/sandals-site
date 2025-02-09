@@ -2,6 +2,7 @@ import Logo from "../assets/sandals-logo.png";
 import { Menu, X } from "lucide-react";
 import { Send } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -27,14 +28,11 @@ const Navbar = () => {
           <div className="flex justify-between items-center ">
             <div
               onClick={handleTitleClick}
-              to="home"
-              offset={-70}
               className="flex items-center flex-shrink-0 hover:cursor-pointer"
             >
-              <img src={Logo} alt="" className="h-14 mr-2" />
-              {/* <h1 className="text-2xl tracking-tight text-white">
-                BTS&nbsp;Consulting
-              </h1> */}
+              <Link to="home" smooth={true} duration={900} offset={-80}>
+                <img src={Logo} alt="" className="h-14 mr-2" />
+              </Link>
             </div>
 
             <div className="lg:hidden flex text-white">
@@ -44,17 +42,24 @@ const Navbar = () => {
                 <Menu onClick={handleMenuClick} />
               )}
             </div>
-            <ul className="hidden text-base font-accent lg:flex ml-14 space-x-12 text-baseLight hover:cursor-default">
-              <li></li>
-              <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
-                About
-              </li>
-              <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
-                Services
-              </li>
-              <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
-                Contact
-              </li>
+            <ul className="hidden text-base font-main lg:flex ml-14 space-x-12 text-baseLight hover:cursor-default">
+              <Link to="about" smooth={true} duration={900} offset={-40}>
+                <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
+                  About
+                </li>
+              </Link>
+              <Link to="services" smooth={true} duration={900} offset={-60}>
+                <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
+                  Services
+                </li>
+              </Link>
+              <Link to="contact" smooth={true} duration={900} offset={-300}>
+                <div>
+                  <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
+                    Contact
+                  </li>
+                </div>
+              </Link>
             </ul>
             <div className="hidden lg:flex justify-center space-x-12 items-center">
               <a
@@ -72,29 +77,31 @@ const Navbar = () => {
       </nav>
       {menuIsOpen && (
         <div className="fixed w-full right-0 z-20">
-          <div className="bg-primaryMain rounded-b-2xl lg:hidden mx-3 shadow-lg md:grid md:grid-cols-2 flex flex-col gap-3 justify-center p-4 text-base font-accent">
-            <div
-              onClick={handleMenuClick}
-              to="about"
-              offset={-70}
-              className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
-            >
-              About
-            </div>
-            <div
-              onClick={handleMenuClick}
-              to="services"
-              className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
-            >
-              Services
-            </div>
-            <div
-              onClick={handleMenuClick}
-              to="about"
-              className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
-            >
-              Contact
-            </div>
+          <div className="bg-primaryMain rounded-b-2xl lg:hidden mx-3 shadow-lg md:grid md:grid-cols-2 flex flex-col gap-3 justify-center p-4 text-base font-main">
+            <Link to="about" smooth={true} duration={900} offset={-40}>
+              <div
+                onClick={handleMenuClick}
+                className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
+              >
+                About
+              </div>
+            </Link>
+            <Link to="services" smooth={true} duration={900} offset={-60}>
+              <div
+                onClick={handleMenuClick}
+                className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
+              >
+                Services
+              </div>
+            </Link>
+            <Link to="contact" smooth={true} duration={900} offset={-40}>
+              <div
+                onClick={handleMenuClick}
+                className="border-2 border-baseLight hover:bg-primaryMain text-baseLight text-lg py-2 px-3 text-center rounded-full  bg-accentLight/10 hover:cursor-pointer transition-all duration-300 ease-in-out"
+              >
+                Contact
+              </div>
+            </Link>
             <a className="border-2 border-baseLight hover:bg-white text-primaryMain text-lg py-2 px-3 text-center rounded-full  bg-baseLight hover:cursor-pointer transition-all duration-300 ease-in-out">
               <div className="flex space-x-2 items-center justify-center">
                 <p>Get in touch</p>

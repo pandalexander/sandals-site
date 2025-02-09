@@ -3,12 +3,12 @@ import Services from "./components/Services";
 import ScrollSection from "./components/ScrollSection";
 import Navbar from "./components/Navbar";
 import CorePrinciples from "./components/CorePrinciples";
-
 import WhyDisciple from "./components/WhyDisciple";
 import Mission from "./components/Mission";
 import CTA from "./components/CTA";
-
 import Footer from "./components/Footer";
+import { Element } from "react-scroll";
+
 // import ServicesWithPhotos from "./components/ServiceSectionPhotos";
 
 function App() {
@@ -18,13 +18,21 @@ function App() {
 
       <div className="flex justify-center">
         <div className="flex flex-col items-stretch max-w-7xl mx-3">
-          <Hero />
+          <Element name="home">
+            <Hero />
+          </Element>
           <ScrollSection />
           <WhyDisciple />
-          <Mission />
+          <Element name="about">
+            <Mission />
+          </Element>
           <CorePrinciples />
-          <Services />
-          <CTA />
+          <Element name="services">
+            <Services />
+          </Element>
+          <Element name="contact">
+            <CTA />
+          </Element>
           {/* <ServicesWithPhotos /> */}
           <Footer />
         </div>
