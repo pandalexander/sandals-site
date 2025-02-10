@@ -68,7 +68,7 @@ export default function Hero() {
         className=" flex-1 flex flex-col md:gap-8 gap-6"
       >
         <h1
-          className={`box font-bold text-baseDark text-4xl md:text-5xl lg:text-6xl !leading-snug text-balance`}
+          className={`invisible box font-bold text-baseDark text-4xl md:text-5xl lg:text-6xl !leading-snug text-balance`}
         >
           Empower Your Church to Grow Together in{" "}
           <span className="bg-gradient-to-br from-primaryMain to-primaryDark bg-clip-text text-transparent">
@@ -76,12 +76,12 @@ export default function Hero() {
           </span>
         </h1>
         <p
-          className={`box text-baseDark leading-loose text-lg md:text-xl text-balance`}
+          className={`invisible box text-baseDark leading-loose text-lg md:text-xl text-balance`}
         >
           Discover the next generation of ministry technology—where biblical
           discipleship meets the power of AI.
         </p>
-        <div className={`box`}>
+        <div className={`invisible box`}>
           <button
             className=" flex items-center justify-between md:mx-0 mx-auto px-6 bg-baseLight rounded-full p-2 text-baseDark font-bold text-lg max-w-64 hover:bg-primaryMain hover:text-baseLight hover:-translate-y-1 transition-all duration-200"
             aria-label="Download the app today"
@@ -97,7 +97,7 @@ export default function Hero() {
         ref={heroImageRef}
         className={`${
           heroIsLoaded ? "image" : "opacity-0"
-        } flex-1 md:max-w-md max-w-96 `}
+        } invisible flex-1 md:max-w-md max-w-96 `}
       >
         <img src={heroUrl} alt="Mockup of the app showcasing features" />
       </div>
