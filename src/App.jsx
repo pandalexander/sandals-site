@@ -14,11 +14,12 @@ import { Element } from "react-scroll";
 function App() {
   return (
     <>
+      <Navbar className="sticky top-0 z-50" />
+
       <div className="lg:h-screen flex flex-col">
         {" "}
         {/* Apply h-screen on large screens and above */}
-        <Navbar />
-        <Element name="home" className="mx-3 max-w-7xl my-auto self-center">
+        <Element name="home" className="mx-3 max-w-7xl self-center">
           <Hero />
         </Element>
       </div>
