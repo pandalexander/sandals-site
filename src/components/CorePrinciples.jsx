@@ -1,13 +1,12 @@
-import {
-  Hand,
-  Brain,
-  BookOpenCheck,
-  HandHelping,
-  Flame,
-  Volume2,
-  HandPlatter,
-  Smile,
-} from "lucide-react";
+import BearWitness from "../assets/BearWitness.svg";
+import BeHoly from "../assets/BeHoly.svg";
+import KnowChrist from "../assets/KnowChrist.svg";
+import LiveSpirit from "../assets/LiveSpirit.svg";
+import ObeyWord from "../assets/ObeyWord.svg";
+import Pray from "../assets/Pray.svg";
+import ServeOthers from "../assets/ServeOthers.svg";
+import WorshipGod from "../assets/WorshipGod.svg";
+
 import PropTypes from "prop-types";
 
 function Principle({ Icon, title, paragraph }) {
@@ -16,8 +15,10 @@ function Principle({ Icon, title, paragraph }) {
       className="min-w-fit
     p-6 flex flex-col gap-3 bg-baseLight to-primaryDark text-baseDark rounded-2xl transition-all duration-300 ease-in-out hover:bg-baseLight hover:cursor-default border-accentMuted border-2 hover:border-primaryMain hover:shadow-xl"
     >
-      <div className="flex gap-3">
-        <Icon className={`min-w-6 min-h-6 text-highlight`} />
+      <div className="flex items-center justify-start gap-4">
+        <div className="h-12 w-12 flex justify-center items-center p-1">
+          <img src={Icon} alt="" className={`min-w-2 min-h-2`} />
+        </div>
         <h3>{title}</h3>
       </div>
       <p>{paragraph}</p>
@@ -41,56 +42,56 @@ const CorePrinciples = () => {
         <div className="flex">
           <div className="self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch  gap-6 flex-1  rounded-2xl my-6">
             <Principle
-              Icon={Hand}
+              Icon={WorshipGod}
               title={"Worship God"}
               paragraph={
                 "Engage in authentic worship practices to connect deeply with God's presence."
               }
             />
             <Principle
-              Icon={Brain}
+              Icon={KnowChrist}
               title={"Know Christ"}
               paragraph={
                 "Grow in understanding and intimacy with Jesus, allowing Him to transform your life."
               }
             />{" "}
             <Principle
-              Icon={BookOpenCheck}
+              Icon={ObeyWord}
               title={"Obey the Word"}
               paragraph={
                 "Follow biblical teachings as a guide for living faithfully and righteously."
               }
             />{" "}
             <Principle
-              Icon={HandHelping}
+              Icon={Pray}
               title={"Pray Continuously"}
               paragraph={
                 "Maintain an ongoing dialogue with God through prayer, seeking His guidance and strength."
               }
             />{" "}
             <Principle
-              Icon={Flame}
+              Icon={LiveSpirit}
               title={"Live in the Spirit"}
               paragraph={
                 "Foster a relationship with the Holy Spirit to empower spiritual growth and maturity."
               }
             />{" "}
             <Principle
-              Icon={Volume2}
+              Icon={BearWitness}
               title={"Bear Witness"}
               paragraph={
                 "Share your faith journey and Christ’s message authentically with others."
               }
             />{" "}
             <Principle
-              Icon={HandPlatter}
+              Icon={ServeOthers}
               title={"Serve One Another"}
               paragraph={
                 "Embrace servant leadership by supporting and uplifting fellow believers."
               }
             />{" "}
             <Principle
-              Icon={Smile}
+              Icon={BeHoly}
               title={"Be Holy"}
               paragraph={
                 "Strive for holiness as a reflection of God's character, separating from worldly influences."
