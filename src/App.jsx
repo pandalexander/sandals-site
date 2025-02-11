@@ -14,13 +14,22 @@ import { Element } from "react-scroll";
 function App() {
   return (
     <>
-      <Navbar />
+      <div className="lg:h-screen flex flex-col">
+        {" "}
+        {/* Apply h-screen on large screens and above */}
+        <Navbar />
+        <Element name="home" className="mx-3 max-w-7xl my-auto self-center">
+          <Hero />
+        </Element>
+      </div>
+
+      {/* <Navbar /> */}
 
       <div className="flex justify-center">
         <div className="flex flex-col items-stretch max-w-7xl mx-3">
-          <Element name="home">
+          {/* <Element name="home">
             <Hero />
-          </Element>
+          </Element> */}
           <ScrollSection />
           <WhyDisciple />
           <Element name="about">

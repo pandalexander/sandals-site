@@ -108,13 +108,13 @@ export default function Hero() {
       <div className="background invisible self-center bg-accentMuted rounded-2xl mt-6 py-6 px-8 md:px-12">
         <section
           className="
-              flex flex-col items-start gap-16
+              flex flex-col items-center gap-16
       
               md:flex-row md:justify-center md:items-center lg:gap-28 md:gap-16"
         >
           <header
             ref={heroTriggerRef}
-            className=" flex-1 flex flex-col md:gap-8 gap-6"
+            className="flex-1 flex flex-col md:gap-8 gap-6  text-center md:text-left"
           >
             <h1
               className={`${
@@ -129,7 +129,7 @@ export default function Hero() {
             <p
               className={`${
                 pageLoaded ? "box" : ""
-              } invisible text-baseDark leading-loose text-lg md:text-xl text-balance`}
+              } invisible text-baseDar leading-loose text-lg md:text-xl text-balance`}
             >
               Discover the next generation of ministry technology—where biblical
               discipleship meets the power of AI.
@@ -150,7 +150,7 @@ export default function Hero() {
             ref={heroImageRef}
             className={`${
               heroIsLoaded ? "image" : ""
-            } float invisible flex-1 md:max-w-md max-w-96 `}
+            } float invisible flex-1 md:max-w-md max-w-96`}
           >
             <img src={heroUrl} alt="Mockup of the app showcasing features" />
           </div>
