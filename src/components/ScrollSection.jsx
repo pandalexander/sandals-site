@@ -26,8 +26,8 @@ export default function ScrollSection() {
                   "programs",
                   "small group",
                   "retreats",
-                  "men's group",
-                  "women's group",
+                  "men's groups",
+                  "women's groups",
                   "youth ministries",
                   "recovery ministries",
                 ]}
