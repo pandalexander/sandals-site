@@ -104,11 +104,11 @@ export default function Hero() {
   }, [pageLoaded, heroIsLoaded]);
 
   return (
-    <div ref={root}>
-      <div className="background invisible self-center bg-accentMuted rounded-2xl my-6 py-14 px-8 md:px-12">
+    <div ref={root} className="flex justify-center">
+      <div className="max-w-7xl mx-3 background invisible self-center bg-accentMuted rounded-2xl mt-6 py-6 px-8 md:px-12">
         <section
           className="
-              flex flex-col items-center gap-16
+              flex flex-col items-start gap-16
       
               md:flex-row md:justify-center md:items-center lg:gap-28 md:gap-16"
         >

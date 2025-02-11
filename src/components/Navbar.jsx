@@ -3,6 +3,10 @@ import { Menu, X } from "lucide-react";
 import { Send } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-scroll";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useRef, useLayoutEffect } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -17,10 +21,33 @@ const Navbar = () => {
     }
   };
 
+  const root = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".nav-body",
+        { x: 0, yPercent: -100, autoAlpha: 1 },
+        {
+          x: 0,
+          yPercent: 0,
+          rotation: 0,
+          delay: 1,
+          duration: 1.5,
+          autoAlpha: 1,
+          ease: "sine.out",
+          force3D: true,
+        }
+      );
+    }, root);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <>
+    <div ref={root}>
       <nav
-        className={`sticky top-0 z-50 py-3 bg-primaryMain  font-semibold lg:rounded-b-2xl mx-3 ${
+        className={`nav-body sticky top-0 z-50 py-3 bg-primaryMain  font-semibold lg:rounded-b-2xl mx-3 ${
           menuIsOpen ? "" : "shadow-lg rounded-b-2xl "
         }`}
       >
@@ -28,7 +55,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center ">
             <div
               onClick={handleTitleClick}
-              className="flex items-center flex-shrink-0 hover:cursor-pointer"
+              className="flex items-center flex-shrink-0 hover:cursor-pointer "
             >
               <Link to="home" smooth={true} duration={900} offset={-80}>
                 <img src={Logo} alt="" className="h-14 mr-2" />
@@ -42,7 +69,7 @@ const Navbar = () => {
                 <Menu onClick={handleMenuClick} />
               )}
             </div>
-            <ul className="hidden text-base font-main lg:flex ml-14 space-x-12 text-baseLight hover:cursor-default">
+            <ul className="hidden text-sm font-main lg:flex ml-14 space-x-12 text-baseLight hover:cursor-default">
               <Link to="about" smooth={true} duration={900} offset={-40}>
                 <li className="hover:text-accentMuted hover:cursor-pointer transition-all duration-300 ease-in-out">
                   About
@@ -111,7 +138,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
