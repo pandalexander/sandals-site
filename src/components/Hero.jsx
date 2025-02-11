@@ -105,7 +105,7 @@ export default function Hero() {
 
   return (
     <div ref={root} className="flex justify-center">
-      <div className="max-w-7xl mx-3 background invisible self-center bg-accentMuted rounded-2xl mt-6 py-6 px-8 md:px-12">
+      <div className="background invisible self-center bg-accentMuted rounded-2xl mt-6 py-6 px-8 md:px-12">
         <section
           className="
               flex flex-col items-start gap-16

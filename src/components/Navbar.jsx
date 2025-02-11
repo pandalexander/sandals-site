@@ -45,9 +45,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div ref={root}>
+    <div ref={root} className="sticky top-0 z-50">
       <nav
-        className={`nav-body sticky top-0 z-50 py-3 bg-primaryMain  font-semibold lg:rounded-b-2xl mx-3 ${
+        className={`nav-body py-3 bg-primaryMain  font-semibold lg:rounded-b-2xl mx-3 ${
           menuIsOpen ? "" : "shadow-lg rounded-b-2xl "
         }`}
       >
