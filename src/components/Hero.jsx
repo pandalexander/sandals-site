@@ -104,8 +104,8 @@ export default function Hero() {
   }, [pageLoaded, heroIsLoaded]);
 
   return (
-    <div ref={root} className="flex justify-center">
-      <div className="background invisible self-center bg-accentMuted rounded-2xl mt-6 py-6 px-8 md:px-12">
+    <div ref={root} className="">
+      <div className="background invisible self-center bg-accentMuted flex md:h-hero-height rounded-2xl py-6 px-8 md:px-12 mt-6">
         <section
           className="
               flex flex-col items-center gap-16
@@ -114,7 +114,7 @@ export default function Hero() {
         >
           <header
             ref={heroTriggerRef}
-            className="flex-1 flex flex-col md:gap-8 gap-6  text-center md:text-left"
+            className="flex-1 flex flex-col md:gap-8 gap-6  "
           >
             <h1
               className={`${
@@ -129,7 +129,7 @@ export default function Hero() {
             <p
               className={`${
                 pageLoaded ? "box" : ""
-              } invisible text-baseDar leading-loose text-lg md:text-xl text-balance`}
+              } invisible text-baseDar leading-loose text-lg md:text-xl text-balance text-center md:text-left`}
             >
               Discover the next generation of ministry technology—where biblical
               discipleship meets the power of AI.

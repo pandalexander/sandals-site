@@ -16,21 +16,13 @@ function App() {
     <>
       <Navbar className="sticky top-0 z-50" />
 
-      <div className="lg:h-screen flex flex-col">
-        {" "}
-        {/* Apply h-screen on large screens and above */}
-        <Element name="home" className="mx-3 max-w-7xl self-center">
-          <Hero />
-        </Element>
-      </div>
-
       {/* <Navbar /> */}
 
       <div className="flex justify-center">
         <div className="flex flex-col items-stretch max-w-7xl mx-3">
-          {/* <Element name="home">
+          <Element name="home">
             <Hero />
-          </Element> */}
+          </Element>
           <ScrollSection />
           <WhyDisciple />
           <Element name="about">

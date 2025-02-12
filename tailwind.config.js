@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      height: {
+        "hero-height": "calc(100vh - 130px)",
+      },
       colors: {
         primaryMain: "#707750",
         primaryDark: "#2D3529",
