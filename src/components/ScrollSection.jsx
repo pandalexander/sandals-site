@@ -17,9 +17,9 @@ export default function ScrollSection() {
 
       gsap.fromTo(
         typewriter.current,
-        { autoAlpha: 0, xPercent: -20 },
+        { autoAlpha: 0, x: "-100vw" },
         {
-          xPercent: 0,
+          x: 0,
           autoAlpha: 1,
           scrollTrigger: {
             trigger: typewriter.current, // Use el.current here as well
@@ -33,10 +33,10 @@ export default function ScrollSection() {
 
       gsap.fromTo(
         cards, // Target ALL boxes selected by '.animate-box'
-        { autoAlpha: 0, xPercent: -50, rotate: 45 },
+        { autoAlpha: 0, x: "-100vw", rotate: 45 },
         {
           autoAlpha: 1,
-          xPercent: 0,
+          x: 0,
           stagger: 0.2,
           rotate: 0,
           scrollTrigger: {
