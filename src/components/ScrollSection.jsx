@@ -23,7 +23,7 @@ export default function ScrollSection() {
           autoAlpha: 1,
           scrollTrigger: {
             trigger: typewriter.current, // Use el.current here as well
-            start: "top+=25% bottom",
+            start: "bottom bottom",
             end: "bottom center",
             scrub: true,
             markers: false,
@@ -41,10 +41,11 @@ export default function ScrollSection() {
           rotate: 0,
           scrollTrigger: {
             trigger: cardContainer.current, // Use el.current here as well
-            start: "top+=20% bottom",
+            start: "bottom bottom",
+
             end: "bottom center",
             scrub: true,
-            markers: false,
+            markers: true,
           },
         }
       );
