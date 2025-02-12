@@ -23,7 +23,7 @@ export default function ScrollSection() {
           autoAlpha: 1,
           scrollTrigger: {
             trigger: typewriter.current, // Use el.current here as well
-            start: "top+=100px bottom",
+            start: "top bottom",
             end: "bottom center",
             scrub: true,
             markers: false,
@@ -33,15 +33,16 @@ export default function ScrollSection() {
 
       gsap.fromTo(
         cards, // Target ALL boxes selected by '.animate-box'
-        { autoAlpha: 0, yPercent: -50 },
+        { autoAlpha: 0, xPercent: -50, rotate: 45 },
         {
           autoAlpha: 1,
-          yPercent: 0,
+          xPercent: 0,
           stagger: 0.2,
+          rotate: 0,
           scrollTrigger: {
             trigger: cardContainer.current, // Use el.current here as well
-            start: "top+=25% top+=80%",
-            end: "bottom-=25% center+=10%",
+            start: "top bottom",
+            end: "bottom center",
             scrub: true,
             markers: false,
           },
