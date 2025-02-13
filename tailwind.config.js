@@ -3,8 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      minHeight: {
+        "hero-min": "600px", // adjust this base value as needed
+      },
       height: {
-        "hero-height": "calc(100vh - 130px)",
+        "hero-dynamic": "clamp(600px, calc(100vh - 130px), 100vh)",
       },
       colors: {
         primaryMain: "#707750",

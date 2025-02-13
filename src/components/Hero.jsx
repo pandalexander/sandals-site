@@ -105,7 +105,7 @@ export default function Hero() {
 
   return (
     <div ref={root} className="">
-      <div className="background invisible self-center bg-accentMuted flex md:h-hero-height rounded-2xl py-6 px-8 md:px-12 mt-6">
+      <div className="background invisible self-center bg-accentMuted flex md:min-h-hero-min md:h-hero-dynamic rounded-2xl py-6 px-8 md:px-12 mt-6">
         <section
           className="
               flex flex-col items-center gap-16
