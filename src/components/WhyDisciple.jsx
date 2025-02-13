@@ -47,14 +47,12 @@ const WhyDisciple = () => {
 
       gsap.fromTo(
         cards, // Target ALL boxes selected by '.animate-box'
-        { autoAlpha: 0, y: "-50vh", x: "-25vw", rotate: -45 },
+        { autoAlpha: 0, y: "15vw", rotate: 15 },
         {
           autoAlpha: 1,
           y: 0,
-          x: 0,
+          stagger: 0.2,
           rotate: 0,
-          stagger: 0.5,
-          ease: "sine.easeInOut",
           scrollTrigger: {
             trigger: title.current, // Use el.current here as well
             start: "top bottom",
