@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
 import { TextQuote } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useRef, useLayoutEffect } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 function Principle({ number, paragraph }) {
   return (
-    <div className="flex min-w-fit justify-between items-center gap-8 p-8 border-primaryMain bg-white border-[1px] text-primaryMain hover:text-amber-500 transition-all duration-300 ease-in-out hover:cursor-text ">
+    <div className="animate-box invisible flex min-w-fit justify-between items-center gap-8 p-8 border-primaryMain bg-white border-[1px] text-primaryMain hover:text-amber-500 transition-all duration-300 ease-in-out hover:cursor-text ">
       <h1 className="font-accent text-5xl ">{number}</h1>
 
       <p className="text-primaryDark text-right">{paragraph}</p>
@@ -17,13 +21,67 @@ Principle.propTypes = {
 };
 
 const WhyDisciple = () => {
+  const root = useRef();
+  const title = useRef();
+  const cardContainer = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const cards = gsap.utils.toArray(".animate-box");
+
+      gsap.fromTo(
+        title.current,
+        { autoAlpha: 0, x: "-100vw" },
+        {
+          x: 0,
+          autoAlpha: 1,
+          scrollTrigger: {
+            trigger: title.current, // Use el.current here as well
+            start: "bottom bottom",
+            end: "top center",
+            scrub: true,
+            markers: false,
+          },
+        }
+      );
+
+      gsap.fromTo(
+        cards, // Target ALL boxes selected by '.animate-box'
+        { autoAlpha: 0, y: "-50vh", x: "-25vw", rotate: -45 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          x: 0,
+          rotate: 0,
+          stagger: 0.5,
+          ease: "sine.easeInOut",
+          scrollTrigger: {
+            trigger: title.current, // Use el.current here as well
+            start: "top bottom",
+            end: "top top+=200px",
+            scrub: true,
+            markers: false,
+          },
+        }
+      );
+    }, root);
+
+    return () => {
+      ctx.revert();
+    };
+  }, []);
   return (
     <>
-      <div className="self-center mt-12">
-        <h1 className="text-center my-6 text-primaryDark">Why Disciple?</h1>
+      <div ref={root} className="self-center mt-12">
+        <h1 ref={title} className="text-center my-6 text-primaryDark">
+          Why Disciple?
+        </h1>
 
         <div className="flex ">
-          <div className="self-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-6 md:grid-rows-3 xl:grid-rows-2 items-stretch flex-1  mt-6 border-[0.5px] border-primaryMain text-balance">
+          <div
+            ref={cardContainer}
+            className="self-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-6 md:grid-rows-3 xl:grid-rows-2 items-stretch flex-1  mt-6 border-[0.5px] border-primaryMain text-balance"
+          >
             <Principle
               number={"1%"}
               paragraph={
