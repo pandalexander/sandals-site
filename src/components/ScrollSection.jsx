@@ -24,7 +24,7 @@ export default function ScrollSection() {
           scrollTrigger: {
             trigger: typewriter.current, // Use el.current here as well
             start: "bottom bottom",
-            end: "bottom center",
+            end: "top center",
             scrub: true,
             markers: false,
           },
