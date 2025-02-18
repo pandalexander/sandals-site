@@ -3,14 +3,17 @@ import { TextQuote } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef, useLayoutEffect } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Principle({ number, paragraph }) {
   return (
-    <div className="animate-box invisible flex min-w-fit justify-between items-center gap-8 p-8 border-primaryMain bg-white border-[1px] text-primaryMain hover:text-amber-500 transition-all duration-300 ease-in-out hover:cursor-text ">
-      <h1 className="font-accent text-5xl ">{number}</h1>
-
-      <p className="text-primaryDark text-right">{paragraph}</p>
+    <div className="animate-box flex md:invisible">
+      <div className="flex min-w-fit justify-between items-center gap-8 p-8 border-primaryMain bg-white border-[1px] text-primaryMain hover:text-amber-500 transition-all duration-300 ease-in-out hover:cursor-text ">
+        <h1 className="font-accent text-5xl ">{number}</h1>
+        <p className="text-primaryDark text-right">{paragraph}</p>
+      </div>
     </div>
   );
 }
@@ -21,6 +24,8 @@ Principle.propTypes = {
 };
 
 const WhyDisciple = () => {
+  const isMobile = useMediaQuery("(max-width: 767px)");
+
   const root = useRef();
   const title = useRef();
   const cardContainer = useRef();
@@ -29,45 +34,57 @@ const WhyDisciple = () => {
     let ctx = gsap.context(() => {
       const cards = gsap.utils.toArray(".animate-box");
 
-      gsap.fromTo(
-        title.current,
-        { autoAlpha: 0, x: "-100vw" },
-        {
-          x: 0,
-          autoAlpha: 1,
-          scrollTrigger: {
-            trigger: title.current, // Use el.current here as well
-            start: "bottom bottom",
-            end: "top center",
-            scrub: true,
-            markers: false,
-          },
-        }
-      );
+      if (!isMobile) {
+        gsap.fromTo(
+          title.current,
+          { autoAlpha: 0, x: "-100vw" },
+          {
+            x: 0,
+            autoAlpha: 1,
+            scrollTrigger: {
+              trigger: title.current, // Use el.current here as well
+              start: "bottom bottom",
+              end: "top center",
+              scrub: true,
+              markers: false,
+            },
+          }
+        );
 
-      gsap.fromTo(
-        cards, // Target ALL boxes selected by '.animate-box'
-        { autoAlpha: 0, y: "15vw", rotate: 15 },
-        {
-          autoAlpha: 1,
-          y: 0,
-          stagger: 0.2,
-          rotate: 0,
-          scrollTrigger: {
-            trigger: title.current, // Use el.current here as well
-            start: "top bottom",
-            end: "top top+=200px",
-            scrub: true,
-            markers: false,
-          },
-        }
-      );
+        gsap.fromTo(
+          cards,
+          {
+            y: "-25vh",
+            autoAlpha: 0,
+            ease: "sine.out",
+            rotation: 45,
+            force3D: true,
+          }, // Target ALL boxes selected by '.animate-box'
+          {
+            y: 0,
+            duration: 1,
+            rotation: 0,
+            autoAlpha: 1,
+            delay: 0.5,
+            stagger: 0.2,
+            ease: "sine.out",
+            force3D: true,
+            scrollTrigger: {
+              trigger: title.current, // Use el.current here as well
+              start: "top center",
+              end: "top top+=130px",
+              scrub: true,
+              markers: false,
+            },
+          }
+        );
+      }
     }, root);
 
     return () => {
       ctx.revert();
     };
-  }, []);
+  }, [isMobile]);
   return (
     <>
       <div ref={root} className="self-center mt-12">

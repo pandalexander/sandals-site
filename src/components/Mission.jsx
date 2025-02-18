@@ -10,9 +10,12 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef, useLayoutEffect } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
 gsap.registerPlugin(ScrollTrigger);
 
 const Mission = () => {
+  const isMobile = useMediaQuery("(max-width: 767px)");
+
   const [selectedMission, setSelectedMission] = useState(0);
   const missionData = [
     {
@@ -43,34 +46,36 @@ const Mission = () => {
   const animationInitialized = useRef(false); // Ref to track animation initialization
 
   useLayoutEffect(() => {
-    if (!animationInitialized.current) {
-      // Check if animation is already initialized
-      let ctx = gsap.context(() => {
-        gsap.fromTo(
-          body.current,
-          { autoAlpha: 0, x: "50vh" },
-          {
-            autoAlpha: 1,
-            x: 0,
-            ease: "sine.inOut",
-            scrollTrigger: {
-              trigger: body.current,
-              start: "top bottom",
-              end: "center-=20% center",
-              scrub: true,
-              markers: false,
-            },
-          }
-        );
-      }, []);
-      animationInitialized.current = true; // Set ref to true after initialization
+    if (!isMobile) {
+      if (!animationInitialized.current) {
+        // Check if animation is already initialized
+        let ctx = gsap.context(() => {
+          gsap.fromTo(
+            body.current,
+            { autoAlpha: 0, x: "50vh" },
+            {
+              autoAlpha: 1,
+              x: 0,
+              ease: "sine.inOut",
+              scrollTrigger: {
+                trigger: body.current,
+                start: "top bottom",
+                end: "center-=20% center",
+                scrub: true,
+                markers: false,
+              },
+            }
+          );
+        }, []);
+        animationInitialized.current = true; // Set ref to true after initialization
+      }
     }
-  }, []);
+  }, [isMobile]);
 
   return (
     <>
       <div ref={root} className="w-full flex justify-center my-12">
-        <div ref={body} className="invisible">
+        <div ref={body} className="md:invisible">
           <section
             className="w-full bg-gradient-to-br from-baseDark/90 to-baseDark rounded-2xl my-6 py-14 px-8 md:px-12
                   flex flex-col-reverse items-center gap-8
