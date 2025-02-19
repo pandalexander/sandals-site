@@ -84,6 +84,49 @@ const CorePrinciples = () => {
             },
           }
         );
+      } else {
+        gsap.fromTo(
+          title.current,
+          { autoAlpha: 0, x: "-50vw" },
+          {
+            x: 0,
+            autoAlpha: 1,
+            ease: "power1.inOut",
+            duration: 1.5,
+            scrollTrigger: {
+              trigger: title.current, // Use el.current here as well
+              start: "bottom bottom",
+              scrub: false,
+              markers: false,
+            },
+          }
+        );
+
+        cards.forEach((card) => {
+          gsap.fromTo(
+            card,
+            {
+              x: "25vw",
+              rotation: -15,
+              autoAlpha: 0,
+              force3D: true,
+            }, // Target ALL boxes selected by '.animate-box'
+            {
+              x: 0,
+              rotation: 0,
+              autoAlpha: 1,
+              duration: 1.5,
+              ease: "elastic.out(1,0.3)",
+              force3D: true,
+              scrollTrigger: {
+                trigger: card, // Use el.current here as well
+                start: "bottom bottom",
+                scrub: false,
+                markers: false,
+              },
+            }
+          );
+        });
       }
     }, root);
 
