@@ -10,12 +10,9 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef, useLayoutEffect } from "react";
-import { useMediaQuery } from "@react-hook/media-query";
 gsap.registerPlugin(ScrollTrigger);
 
 const Mission = () => {
-  const isMobile = useMediaQuery("(max-width: 767px)");
-
   const [selectedMission, setSelectedMission] = useState(0);
   const missionData = [
     {
@@ -47,25 +44,23 @@ const Mission = () => {
 
   useLayoutEffect(() => {
     if (!animationInitialized.current) {
-      // Check if animation is already initialized
-      let ctx = gsap.context(() => {
-        gsap.fromTo(
-          body.current,
-          { autoAlpha: 0, x: "50vh" },
-          {
-            autoAlpha: 1,
-            x: 0,
-            ease: "sine.inOut",
-            scrollTrigger: {
-              trigger: body.current,
-              start: "top bottom",
-              end: "center-=20% center",
-              scrub: true,
-              markers: false,
-            },
-          }
-        );
-      }, []);
+      gsap.fromTo(
+        body.current,
+        { autoAlpha: 0, x: "50vh" },
+        {
+          autoAlpha: 1,
+          x: 0,
+          ease: "sine.inOut",
+          scrollTrigger: {
+            trigger: body.current,
+            start: "top bottom",
+            end: "center-=20% center",
+            scrub: true,
+            markers: false,
+          },
+        }
+      );
+
       animationInitialized.current = true; // Set ref to true after initialization
     }
   }, []);
