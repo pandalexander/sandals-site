@@ -13,6 +13,7 @@ export default function Services() {
   const isMobile = useMediaQuery("(max-width: 767px)");
   const root = useRef();
   const title = useRef();
+  const firstBlockRef = useRef();
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -22,14 +23,14 @@ export default function Services() {
       if (!isMobile) {
         gsap.fromTo(
           title.current,
-          { autoAlpha: 0, x: "-50vw" },
+          { autoAlpha: 0, y: "-30px" },
           {
-            x: 0,
+            y: 0,
             autoAlpha: 1,
             ease: "power1.inOut",
-            duration: 1.5,
+            duration: 1,
             scrollTrigger: {
-              trigger: title.current, // Use el.current here as well
+              trigger: firstBlockRef.current, // Use el.current here as well
               start: "center bottom",
               scrub: false,
               markers: false,
@@ -93,7 +94,7 @@ export default function Services() {
           Our Tools for Discipleship
         </h1>
 
-        <div className="animate-from-right">
+        <div ref={firstBlockRef} className="animate-from-right">
           <ServiceBlock
             image={AppIllustration}
             imageAlt={"Illustration of an app interface"}

@@ -45,7 +45,7 @@ const WhyDisciple = () => {
             ease: "power1.inOut",
             scrollTrigger: {
               trigger: cardContainer.current, // Use el.current here as well
-              start: "top bottom",
+              start: "center bottom",
               scrub: false,
               markers: false,
             },

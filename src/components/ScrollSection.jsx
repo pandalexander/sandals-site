@@ -21,12 +21,12 @@ export default function ScrollSection() {
       if (!isMobile) {
         gsap.fromTo(
           typewriter.current,
-          { autoAlpha: 0, x: "-50vw" },
+          { autoAlpha: 0, y: "-30px" },
           {
-            x: 0,
+            y: 0,
             autoAlpha: 1,
             ease: "power1.inOut",
-            duration: 1.5,
+            duration: 1,
             scrollTrigger: {
               trigger: typewriter.current, // Use el.current here as well
               start: "bottom bottom",
