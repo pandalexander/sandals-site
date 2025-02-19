@@ -24,14 +24,24 @@ function App() {
             <Hero />
           </Element>
           <ScrollSection />
+          <div className="lg:my-12"></div>
+
           <WhyDisciple />
+          <div className="lg:my-12"></div>
+
           <Element name="about">
             <Mission />
           </Element>
+          <div className="lg:my-12"></div>
+
           <CorePrinciples />
+          <div className="lg:my-12"></div>
+
           <Element name="services">
             <Services />
           </Element>
+          <div className="lg:my-12"></div>
+
           <Element name="contact">
             <CTA />
           </Element>
