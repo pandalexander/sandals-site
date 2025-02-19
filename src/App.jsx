@@ -8,10 +8,14 @@ import Mission from "./components/Mission";
 import CTA from "./components/CTA";
 // import Footer from "./components/Footer";
 import { Element } from "react-scroll";
+import { Fade } from "react-awesome-reveal";
+import { useMediaQuery } from "@react-hook/media-query";
 
 // import ServicesWithPhotos from "./components/ServiceSectionPhotos";
 
 function App() {
+  const isMobile = useMediaQuery("(max-width: 767px)");
+
   return (
     <>
       <Navbar className="sticky top-0 z-50" />
@@ -20,33 +24,84 @@ function App() {
 
       <div className="flex justify-center">
         <div className="flex flex-col items-stretch max-w-7xl mx-3">
-          <Element name="home">
-            <Hero />
-          </Element>
-          <ScrollSection />
-          <div className="lg:my-12"></div>
+          {isMobile && (
+            <>
+              <Element name="home">
+                <Hero />
+              </Element>
 
-          <WhyDisciple />
-          <div className="lg:my-12"></div>
+              <Fade delay={500}>
+                <ScrollSection />
+              </Fade>
 
-          <Element name="about">
-            <Mission />
-          </Element>
-          <div className="lg:my-12"></div>
+              <div className="lg:my-12"></div>
 
-          <CorePrinciples />
-          <div className="lg:my-12"></div>
+              <Fade delay={500}>
+                <WhyDisciple />
+              </Fade>
 
-          <Element name="services">
-            <Services />
-          </Element>
-          <div className="lg:my-12"></div>
+              <div className="lg:my-12"></div>
 
-          <Element name="contact">
-            <CTA />
-          </Element>
-          {/* <ServicesWithPhotos /> */}
-          {/* <Footer /> */}
+              <Element name="about">
+                <Fade delay={500}>
+                  <Mission />
+                </Fade>
+              </Element>
+              <div className="lg:my-12"></div>
+
+              <Fade delay={500}>
+                <CorePrinciples />
+              </Fade>
+
+              <div className="lg:my-12"></div>
+
+              <Element name="services">
+                <Fade delay={500}>
+                  <Services />
+                </Fade>
+              </Element>
+              <div className="lg:my-12"></div>
+
+              <Element name="contact">
+                <Fade delay={500}>
+                  <CTA />
+                </Fade>
+              </Element>
+              {/* <ServicesWithPhotos /> */}
+              {/* <Footer /> */}
+            </>
+          )}
+          {!isMobile && (
+            <>
+              <Element name="home">
+                <Hero />
+              </Element>
+              <ScrollSection />
+              <div className="lg:my-12"></div>
+
+              <WhyDisciple />
+              <div className="lg:my-12"></div>
+
+              <Element name="about">
+                <Mission />
+              </Element>
+              <div className="lg:my-12"></div>
+
+              <CorePrinciples />
+              <div className="lg:my-12"></div>
+
+              <Element name="services">
+                <Services />
+              </Element>
+              <div className="lg:my-12"></div>
+
+              <Element name="contact">
+                <CTA />
+              </Element>
+              {/* <ServicesWithPhotos /> */}
+              {/* <Footer /> */}
+            </>
+          )}
         </div>
       </div>
     </>
