@@ -6,7 +6,7 @@ import CorePrinciples from "./components/CorePrinciples";
 import WhyDisciple from "./components/WhyDisciple";
 import Mission from "./components/Mission";
 import CTA from "./components/CTA";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import { Element } from "react-scroll";
 
 // import ServicesWithPhotos from "./components/ServiceSectionPhotos";
@@ -36,7 +36,7 @@ function App() {
             <CTA />
           </Element>
           {/* <ServicesWithPhotos /> */}
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </>
