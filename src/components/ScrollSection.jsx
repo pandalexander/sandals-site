@@ -65,9 +65,9 @@ export default function ScrollSection() {
             duration: 1,
             scrollTrigger: {
               trigger: root.current, // Use el.current here as well
-              start: "top bottom-=25vh",
+              start: "top center",
               scrub: false,
-              markers: false,
+              markers: true,
             },
           }
         );
@@ -84,7 +84,7 @@ export default function ScrollSection() {
             duration: 2,
             scrollTrigger: {
               trigger: root.current, // Use el.current here as well
-              start: "top bottom-=25vh",
+              start: "top center",
               scrub: false,
               markers: false,
             },
