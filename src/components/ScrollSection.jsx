@@ -21,16 +21,16 @@ export default function ScrollSection() {
       if (!isMobile) {
         gsap.fromTo(
           typewriter.current,
-          { autoAlpha: 0, x: "-100vw" },
+          { autoAlpha: 0, x: "-50vw" },
           {
             x: 0,
             autoAlpha: 1,
-            ease: "power1.out",
+            ease: "power1.inOut",
+            duration: 1.5,
             scrollTrigger: {
               trigger: typewriter.current, // Use el.current here as well
               start: "bottom bottom",
-              end: "bottom center",
-              scrub: true,
+              scrub: false,
               markers: false,
             },
           }
@@ -44,12 +44,12 @@ export default function ScrollSection() {
             x: 0,
             stagger: 0.2,
             rotate: 0,
-            ease: "power1.out",
+            ease: "power1.inOut",
+            duration: 2,
             scrollTrigger: {
               trigger: typewriter.current, // Use el.current here as well
               start: "bottom bottom",
-              end: "top top+=130px",
-              scrub: true,
+              scrub: false,
               markers: false,
             },
           }
