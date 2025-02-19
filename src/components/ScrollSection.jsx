@@ -3,7 +3,7 @@ import { CircleAlert, TreeDeciduous } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect, useEffect } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,88 +18,73 @@ export default function ScrollSection() {
     let ctx = gsap.context(() => {
       const cards = gsap.utils.toArray(".animate-card");
 
-      if (!isMobile) {
-        gsap.fromTo(
-          typewriter.current,
-          { autoAlpha: 0, y: "-30px" },
-          {
-            y: 0,
-            autoAlpha: 1,
-            ease: "power1.inOut",
-            duration: 1,
-            scrollTrigger: {
-              trigger: typewriter.current, // Use el.current here as well
-              start: "bottom bottom",
-              scrub: false,
-              markers: false,
-            },
-          }
-        );
+      // Common settings for both mobile and desktop
+      const triggerSettings = {
+        trigger: root.current,
+        start: "top 80%", // This is more reliable across devices
+        end: "bottom top",
+        markers: true,
+        invalidateOnRefresh: true, // Add this
+        fastScrollEnd: true, // Add this for better mobile performance
+      };
 
-        gsap.fromTo(
-          cards, // Target ALL boxes selected by '.animate-box'
-          { autoAlpha: 0, x: "-100vw", rotate: 45 },
-          {
-            autoAlpha: 1,
-            x: 0,
-            stagger: 0.2,
-            rotate: 0,
-            ease: "power1.inOut",
-            duration: 2,
-            scrollTrigger: {
-              trigger: typewriter.current, // Use el.current here as well
-              start: "bottom bottom",
-              scrub: false,
-              markers: false,
-            },
-          }
-        );
-      } else {
-        gsap.fromTo(
-          typewriter.current,
-          { autoAlpha: 0, y: "-30px" },
-          {
-            y: 0,
-            autoAlpha: 1,
-            ease: "power1.inOut",
-            duration: 1,
-            scrollTrigger: {
-              trigger: root.current, // Use el.current here as well
-              start: "top center",
-              scrub: false,
-              markers: true,
-            },
-          }
-        );
+      gsap.fromTo(
+        typewriter.current,
+        { autoAlpha: 0, y: "-30px" },
+        {
+          y: 0,
+          autoAlpha: 1,
+          ease: "power1.inOut",
+          duration: 1,
+          scrollTrigger: triggerSettings,
+        }
+      );
 
-        gsap.fromTo(
-          cards, // Target ALL boxes selected by '.animate-box'
-          { autoAlpha: 0, x: "-100vw", rotate: 45 },
-          {
-            autoAlpha: 1,
-            x: 0,
-            stagger: 0.2,
-            rotate: 0,
-            ease: "power1.inOut",
-            duration: 2,
-            scrollTrigger: {
-              trigger: root.current, // Use el.current here as well
-              start: "top center",
-              scrub: false,
-              markers: false,
-            },
-          }
-        );
-      }
+      gsap.fromTo(
+        cards,
+        { autoAlpha: 0, x: isMobile ? "-50vw" : "-100vw", rotate: 45 },
+        {
+          autoAlpha: 1,
+          x: 0,
+          stagger: 0.2,
+          rotate: 0,
+          ease: "power1.inOut",
+          duration: isMobile ? 1.5 : 2,
+          scrollTrigger: triggerSettings,
+        }
+      );
     }, root);
 
     return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
       ctx.revert();
     };
   }, [isMobile]);
 
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver(() => {
+      ScrollTrigger.refresh();
+    });
+
+    if (root.current) {
+      resizeObserver.observe(root.current);
+    }
+
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  useLayoutEffect(() => {
+    if (isMobile) {
+      // Small delay to ensure layout is complete on mobile
+      const timer = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile]);
+
   return (
-    <div ref={root}>
+    <div ref={root} className="relative w-full overflow-visible">
       <section
         id="scroll-wheel"
         className="flex my-12  justify-center
@@ -110,7 +95,7 @@ export default function ScrollSection() {
           {/* Content container with responsive layout */}
           <div
             ref={typewriter}
-            className=" flex lg:flex-row flex-col sm:justify-center lg:justify-start flex-wrap"
+            className="invisible flex lg:flex-row flex-col sm:justify-center lg:justify-start flex-wrap"
           >
             <h2 className="header-trigger text-5xl md:text-6xl mt-10 text-primaryDark text-wrap md:text-nowrap lg:my-10">
               Discipleship is not&nbsp;
