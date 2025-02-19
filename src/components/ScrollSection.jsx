@@ -4,9 +4,12 @@ import { Typewriter } from "react-simple-typewriter";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef, useLayoutEffect } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollSection() {
+  const isMobile = useMediaQuery("(max-width: 767px)");
+
   const root = useRef();
   const typewriter = useRef();
   const cardContainer = useRef();
@@ -15,47 +18,49 @@ export default function ScrollSection() {
     let ctx = gsap.context(() => {
       const cards = gsap.utils.toArray(".animate-card");
 
-      gsap.fromTo(
-        typewriter.current,
-        { autoAlpha: 0, y: "-30px" },
-        {
-          y: 0,
-          autoAlpha: 1,
-          ease: "power1.inOut",
-          duration: 1,
-          scrollTrigger: {
-            trigger: typewriter.current, // Use el.current here as well
-            start: "bottom bottom",
-            scrub: false,
-            markers: false,
-          },
-        }
-      );
+      if (!isMobile) {
+        gsap.fromTo(
+          typewriter.current,
+          { autoAlpha: 0, y: "-30px" },
+          {
+            y: 0,
+            autoAlpha: 1,
+            ease: "power1.inOut",
+            duration: 1,
+            scrollTrigger: {
+              trigger: typewriter.current, // Use el.current here as well
+              start: "bottom bottom",
+              scrub: false,
+              markers: false,
+            },
+          }
+        );
 
-      gsap.fromTo(
-        cards, // Target ALL boxes selected by '.animate-box'
-        { autoAlpha: 0, x: "-100vw", rotate: 45 },
-        {
-          autoAlpha: 1,
-          x: 0,
-          stagger: 0.2,
-          rotate: 0,
-          ease: "power1.inOut",
-          duration: 2,
-          scrollTrigger: {
-            trigger: typewriter.current, // Use el.current here as well
-            start: "bottom bottom",
-            scrub: false,
-            markers: false,
-          },
-        }
-      );
+        gsap.fromTo(
+          cards, // Target ALL boxes selected by '.animate-box'
+          { autoAlpha: 0, x: "-100vw", rotate: 45 },
+          {
+            autoAlpha: 1,
+            x: 0,
+            stagger: 0.2,
+            rotate: 0,
+            ease: "power1.inOut",
+            duration: 2,
+            scrollTrigger: {
+              trigger: typewriter.current, // Use el.current here as well
+              start: "bottom bottom",
+              scrub: false,
+              markers: false,
+            },
+          }
+        );
+      }
     }, root);
 
     return () => {
       ctx.revert();
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <div ref={root}>
