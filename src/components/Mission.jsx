@@ -10,6 +10,8 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef, useLayoutEffect } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Mission = () => {
@@ -41,29 +43,32 @@ const Mission = () => {
   const root = useRef();
   const body = useRef();
   const animationInitialized = useRef(false); // Ref to track animation initialization
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   useLayoutEffect(() => {
-    if (!animationInitialized.current) {
-      gsap.fromTo(
-        body.current,
-        { autoAlpha: 0, x: "50vh" },
-        {
-          autoAlpha: 1,
-          x: 0,
-          ease: "sine.inOut",
-          scrollTrigger: {
-            trigger: body.current,
-            start: "top bottom",
-            end: "center-=20% center",
-            scrub: true,
-            markers: false,
-          },
-        }
-      );
+    if (!isMobile) {
+      if (!animationInitialized.current) {
+        gsap.fromTo(
+          body.current,
+          { autoAlpha: 0, x: "50vh" },
+          {
+            autoAlpha: 1,
+            x: 0,
+            ease: "sine.inOut",
+            scrollTrigger: {
+              trigger: body.current,
+              start: "top bottom",
+              end: "center-=20% center",
+              scrub: true,
+              markers: false,
+            },
+          }
+        );
 
-      animationInitialized.current = true; // Set ref to true after initialization
+        animationInitialized.current = true; // Set ref to true after initialization
+      }
     }
-  }, []);
+  }, [isMobile]);
 
   return (
     <>

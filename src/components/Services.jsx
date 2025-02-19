@@ -79,65 +79,6 @@ export default function Services() {
             }
           );
         });
-      } else {
-        gsap.fromTo(
-          title.current,
-          { autoAlpha: 0, y: "-30px" },
-          {
-            y: 0,
-            autoAlpha: 1,
-            ease: "power1.inOut",
-            duration: 1,
-            scrollTrigger: {
-              trigger: title.current, // Use el.current here as well
-              start: "bottom bottom",
-              scrub: false,
-              markers: false,
-            },
-          }
-        );
-
-        cardsRight.forEach((card) => {
-          gsap.fromTo(
-            card, // Target ALL boxes selected by '.animate-box'
-            { autoAlpha: 0, x: "50vw" },
-            {
-              autoAlpha: 1,
-              x: 0,
-              stagger: 0.2,
-              rotate: 0,
-              ease: "elastic.out(1,0.5)",
-              duration: 2,
-              scrollTrigger: {
-                trigger: card, // Use el.current here as well
-                start: "center bottom",
-                scrub: false,
-                markers: false,
-              },
-            }
-          );
-        });
-
-        cardsLeft.forEach((card) => {
-          gsap.fromTo(
-            card, // Target ALL boxes selected by '.animate-box'
-            { autoAlpha: 0, x: "-50vw" },
-            {
-              autoAlpha: 1,
-              x: 0,
-              stagger: 0.2,
-              rotate: 0,
-              ease: "elastic.out(1,0.5)",
-              duration: 2,
-              scrollTrigger: {
-                trigger: card, // Use el.current here as well
-                start: "center bottom",
-                scrub: false,
-                markers: false,
-              },
-            }
-          );
-        });
       }
     }, root);
 
