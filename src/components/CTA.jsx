@@ -26,15 +26,17 @@ const CTA = () => {
             </p>
           </div>
 
-          <button
-            className="flex items-center justify-between md:mx-0 mx-auto px-6 bg-baseLight rounded-full p-2 text-baseDark font-bold text-lg max-w-64 hover:bg-primaryMain hover:text-baseLight hover:-translate-y-1 transition-all duration-200"
-            aria-label="Download the app today"
-          >
-            Get started today{" "}
-            <span className="ml-4">
-              <Footprints />
-            </span>
-          </button>
+          <a href="mailto:info@sandalsdisciple.com">
+            <button
+              className="flex items-center justify-between md:mx-0 mx-auto px-6 bg-baseLight rounded-full p-2 text-baseDark font-bold text-lg max-w-64 hover:bg-primaryMain hover:text-baseLight hover:-translate-y-1 transition-all duration-200"
+              aria-label="Download the app today"
+            >
+              Get started today{" "}
+              <span className="ml-4">
+                <Footprints />
+              </span>
+            </button>
+          </a>
         </section>{" "}
       </div>
     </>

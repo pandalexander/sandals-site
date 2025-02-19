@@ -90,7 +90,7 @@ const Navbar = () => {
             </ul>
             <div className="hidden lg:flex justify-center space-x-12 items-center">
               <a
-                href=""
+                href="mailto:info@sandalsdisciple.com"
                 className="py-2 px-4 border-0 rounded-full bg-gradient-to-br from-white to-accentLight text-primaryDark font-bold hover:translate-x-1 transition-all duration-300"
               >
                 <div className="flex space-x-2 items-center justify-center">
@@ -129,7 +129,10 @@ const Navbar = () => {
                 Contact
               </div>
             </Link>
-            <a className="border-2 border-baseLight hover:bg-white text-primaryMain text-lg py-2 px-3 text-center rounded-full  bg-baseLight hover:cursor-pointer transition-all duration-300 ease-in-out">
+            <a
+              href="mailto:info@sandalsdisciple.com"
+              className="border-2 border-baseLight hover:bg-white text-primaryMain text-lg py-2 px-3 text-center rounded-full  bg-baseLight hover:cursor-pointer transition-all duration-300 ease-in-out"
+            >
               <div className="flex space-x-2 items-center justify-center">
                 <p>Get in touch</p>
                 <Send size={18} className="text-primaryMain" />
