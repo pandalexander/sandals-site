@@ -30,40 +30,40 @@ function App() {
                 <Hero />
               </Element>
 
-              <Fade delay={500}>
+              <Fade triggerOnce delay={500}>
                 <ScrollSection />
               </Fade>
 
               <div className="lg:my-12"></div>
 
-              <Fade delay={500}>
+              <Fade triggerOnce delay={500}>
                 <WhyDisciple />
               </Fade>
 
               <div className="lg:my-12"></div>
 
               <Element name="about">
-                <Fade delay={500}>
+                <Fade triggerOnce delay={500}>
                   <Mission />
                 </Fade>
               </Element>
               <div className="lg:my-12"></div>
 
-              <Fade delay={500}>
+              <Fade triggerOnce delay={500}>
                 <CorePrinciples />
               </Fade>
 
               <div className="lg:my-12"></div>
 
               <Element name="services">
-                <Fade delay={500}>
+                <Fade triggerOnce delay={500}>
                   <Services />
                 </Fade>
               </Element>
               <div className="lg:my-12"></div>
 
               <Element name="contact">
-                <Fade delay={500}>
+                <Fade triggerOnce delay={500}>
                   <CTA />
                 </Fade>
               </Element>
