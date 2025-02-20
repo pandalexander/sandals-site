@@ -30,40 +30,40 @@ function App() {
                 <Hero />
               </Element>
 
-              <Fade delay={0} triggerOnce fraction={0.4}>
+              <Fade delay={0} direction="left" triggerOnce fraction={0.4}>
                 <ScrollSection />
               </Fade>
 
               <div className="lg:my-12"></div>
 
-              <Fade triggerOnce delay={500}>
+              <Fade triggerOnce direction="right" delay={500}>
                 <WhyDisciple />
               </Fade>
 
               <div className="lg:my-12"></div>
 
               <Element name="about">
-                <Fade triggerOnce delay={500}>
+                <Fade direction="left" triggerOnce delay={500}>
                   <Mission />
                 </Fade>
               </Element>
               <div className="lg:my-12"></div>
 
-              <Fade triggerOnce delay={500}>
+              <Fade triggerOnce direction="right" delay={500}>
                 <CorePrinciples />
               </Fade>
 
               <div className="lg:my-12"></div>
 
               <Element name="services">
-                <Fade triggerOnce delay={500}>
+                <Fade triggerOnce delay={500} direction="left">
                   <Services />
                 </Fade>
               </Element>
               <div className="lg:my-12"></div>
 
               <Element name="contact">
-                <Fade triggerOnce delay={500}>
+                <Fade triggerOnce direction="right" delay={500}>
                   <CTA />
                 </Fade>
               </Element>
