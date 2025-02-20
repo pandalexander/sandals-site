@@ -8,7 +8,7 @@ import Mission from "./components/Mission";
 import CTA from "./components/CTA";
 // import Footer from "./components/Footer";
 import { Element } from "react-scroll";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 import { useMediaQuery } from "@react-hook/media-query";
 
 // import ServicesWithPhotos from "./components/ServiceSectionPhotos";
@@ -30,7 +30,7 @@ function App() {
                 <Hero />
               </Element>
 
-              <Fade triggerOnce delay={500}>
+              <Fade delay={0} triggerOnce fraction={0.4}>
                 <ScrollSection />
               </Fade>
 
