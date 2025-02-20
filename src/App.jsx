@@ -22,7 +22,7 @@ function App() {
 
       {/* <Navbar /> */}
 
-      <div className="flex justify-center">
+      <div className="flex justify-center overflow-hidden">
         <div className="flex flex-col items-stretch max-w-7xl mx-3">
           {isMobile && (
             <>
