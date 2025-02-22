@@ -26,7 +26,7 @@ const CTA = () => {
             </p>
           </div>
 
-          <a href="mailto:info@sandalsdisciple.com">
+          <a href="https://docs.google.com/document/d/1nDvwZdPh63Yz2o5vvSqNn3ODN_KSRhrbExbdOXK6cC0/edit?usp=sharing">
             <button
               className="flex items-center justify-between md:mx-0 mx-auto px-6 bg-baseLight rounded-full p-2 text-baseDark font-bold text-lg max-w-64 hover:bg-primaryMain hover:text-baseLight hover:-translate-y-1 transition-all duration-200"
               aria-label="Download the app today"
