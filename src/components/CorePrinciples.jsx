@@ -22,7 +22,7 @@ function Principle({ Icon, title, paragraph }) {
       >
         <div className="flex items-center justify-start gap-4">
           <div className="h-12 w-12 flex justify-center items-center p-1">
-            <img src={Icon} alt="" className={`min-w-2 min-h-2`} />
+            <img src={Icon} alt="" className={``} />
           </div>
           <h3>{title}</h3>
         </div>
