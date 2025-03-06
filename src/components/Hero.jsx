@@ -81,23 +81,6 @@ export default function Hero() {
           force3D: true,
         }
       );
-
-      gsap.fromTo(
-        ".float",
-        {
-          yPercent: -3,
-          yoyo: true,
-          duration: 1.5,
-          repeat: -1,
-        },
-        {
-          yPercent: 3,
-          yoyo: true,
-          duration: 1.5,
-          repeat: -1,
-          ease: "Sine.easeInOut",
-        }
-      );
     }, root);
 
     return () => ctx.revert();
@@ -152,7 +135,7 @@ export default function Hero() {
             ref={heroImageRef}
             className={`${
               heroIsLoaded ? "image" : ""
-            } float invisible flex-1 md:max-w-md max-w-96`}
+            } invisible flex-1 md:max-w-md max-w-96`}
           >
             <img src={heroUrl} alt="Mockup of the app showcasing features" />
           </div>
